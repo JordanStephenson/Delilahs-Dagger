@@ -1,0 +1,57 @@
+body {
+    background-color: #0A1D29;
+}
+header {
+    height: 5vh;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    height: 10vh;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 97vh;
+}
+.profile-pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15%;
+    height: 23%;
+}
+.profile-pic img:nth-child(1) {
+    margin-bottom: 10% ;
+}
+.mini-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 8%;
+}
+.mini-gallery img {
+    padding: 10px;
+}
+.mini-gallery img:nth-child(1){
+    grid-column: 2/3;
+
+}
+.mini-gallery img:nth-child(4){
+    grid-column: 3/4;
+}
+.mini-gallery img:nth-child(3){
+    grid-column: 2/3;
+}
+.bio {
+    font-family: 'Cinzel', cursive;
+    width: 70%;
+    margin-top: 10%;
+    
+}

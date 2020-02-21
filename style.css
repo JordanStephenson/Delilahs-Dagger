@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Dancing Script', cursive;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 7vh;
+    background-color: #0A1D29;
+}
+.burger {
+    margin-right: 5%;
+    height: 20px;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 50%;
+    font-size: 1.2rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+.landing-page {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing-image {
+    margin: 20px 0px;
+}
+.landing-image img {
+    height: 25vh;
+}
+.heading {
+    text-align: center;
+    color: #0A1D29;
+}
+.heading h1{
+    font-size: 50px;
+}
+.heading h3{
+    font-size: 30px;
+}
+.button {
+    padding: 0.2rem 0.7rem;
+    background-color: #EAA30B;
+}
+.button a {
+    color: black;
+}
+.welcome-section {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #0A1D29;
+    color: white;
+}
+.welcome-section .container {
+    width: 70%;
+}
+.headline, .description {
+    padding: 20px 0px;
+}
+.headline {
+    font-size: 30px;
+}
+.description {
+    font-family: cursive;
+    font-size: 15px;
+    font-family: 'Cinzel', serif;
+    line-height: 150%;
+}
+
+.artists {
+    padding: 50px 0px 70px 0px;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: #FFEEDE;
+}
+.artists h1 {
+    position: absolute;
+    right: 50%;
+    top: 1%;
+    transform: translateX(50%);
+    font-size: 40px;
+    color: #0A1D29;
+}
+.artists img {
+    height: 15vh;
+    width: 35vw;
+    justify-self: center;
+    margin-top: 30px;
+
+}
+.artists a{
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    text-decoration: none;
+    color: #0A1D29;
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    transform: translateY(100%);
+    background: #F2C2C2;
+}
+.leanne, .stephanie, .jody {
+    grid-column: 2/3;
+
+}
+.candice, .katy, .sally {
+    grid-column: 3/4;
+}
+.katy, .jody {
+    grid-row: 2/3;
+}
+.leanne, .candice, .jody, .katy, .stephanie, .sally {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+.leanne, .candice {
+    margin-bottom: 30px;
+}
+.jody a, .katy a{
+    margin-bottom: 20px;
+}
+.gallery-pics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
+.gallery-pics img {
+    padding: 3px;
+}
+.gallery .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 50px;
+}
+.gallery h1 {
+    font-size: 30px;
+    padding: 40px 0px
+}
+.underline {
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80%;
+}
+.contact {
+    background-color: #0A1D29;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 50px 0px;
+    font-family: 'Cinzel', cursive;
+}
+
+.contact h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.contact img {
+    width: 100%;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.info p {
+    font-size: 14px;
+}
+.address, .opening-times {
+    width: 50%;
+    text-align: center;
+    padding: 20px 0px;
+}
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+.input-group label{
+    font-size: 20px;
+}
+.input-group input {
+    padding: .5em 5em;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.message .input-group input{
+    padding: 3em 5em;
+    
+}
+footer {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+footer h2 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    opacity: 0.8;
+}
+@media only screen and (min-width: 600px) {
+    .landing-image img {
+        height: 35vh;
+    }
+    .heading h1{
+        font-size: 70px;
+    }
+    .heading h3 {
+        font-size: 40px;
+    }
+    .welcome-section .container {
+        width: 60%;
+    }
+    .headline {
+        font-size: 35px;
+    }
+    .description {
+        font-size: 18px;
+    }
+    .gallery-pics {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+
