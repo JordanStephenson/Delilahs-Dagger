@@ -147,12 +147,14 @@ nav {
 }
 .gallery-pics{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     
 }
 .gallery-pics img {
-    padding: 3px;
+    padding: 5px;
+    width: 75%;
+    margin: auto;
 }
 .gallery .container {
     display: flex;
@@ -167,10 +169,10 @@ nav {
 }
 .underline {
     position: absolute;
-    top: 5%;
+    top: 1.2%;
     right: 50%;
     transform: translateX(50%);
-    width: 80%;
+    width: 75%;
 }
 .contact {
     background-color: #0A1D29;
