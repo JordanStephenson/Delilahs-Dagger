@@ -7,15 +7,18 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 7vh;
+    height: 4vh;
     background-color: #0A1D29;
 }
 .burger {
     margin-right: 5%;
-    height: 17px;
+    height: 14px;
     cursor: pointer;
 }
 
@@ -100,7 +103,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(21, 8vh);
-    grid-gap: 60px 0px;
+    grid-gap: 50px 0px;
     align-items: center;
     position: relative;
     width: 60%; 
@@ -271,7 +274,8 @@ footer h2 {
     font-size: 15px;
     opacity: 0.8;
 }
-@media only screen and (min-width: 600px) {
+
+@media only screen and (min-width: 650px) {
     .landing-image img {
         height: 35vh;
     }
@@ -290,9 +294,7 @@ footer h2 {
     .description {
         font-size: 18px;
     }
-}
-@media only screen and (min-width: 700px) {
-   
+
     .gallery-pics {
         grid-template-columns: repeat(2, minmax(10px, 1fr));
         grid-template-rows: repeat(32, 10vw);
