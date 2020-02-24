@@ -15,7 +15,7 @@ nav {
 }
 .burger {
     margin-right: 5%;
-    height: 20px;
+    height: 17px;
     cursor: pointer;
 }
 
@@ -91,62 +91,67 @@ nav {
     font-family: 'Cinzel', serif;
     line-height: 150%;
 }
+.artists {
 
-.artists .container{
-    padding: 100px 0px 100px 0px;
-    display: grid;
-    grid-template-columns: 5% 1fr 1fr 5%;
-    grid-template-rows: 1fr 1fr 1fr;
-    align-items: center;
-    text-align: center;
-    position: relative;
     background-color: #FFEEDE;
+}
+.artists .container{
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(22, 10vh) ;
+    align-items: center;
+    position: relative;
+    width: 50%; 
+    margin: auto;
 }
 .artists .container h1 {
     position: absolute;
     right: 50%;
-    top: 5%;
+    top: 1%;
     transform: translateX(50%);
-    font-size: 40px;
+    font-size: 50px;
     color: #0A1D29;
 }
 .artists .container img {
-    height: 15vh;
-    width: 35vw;
+    height: 20vh;
+    width: 50vw;
     justify-self: center;
-    margin-top: 30px;
-
-
 }
 .artists .container a{
     text-decoration: none;
     color: #0A1D29;
-    font-size: 1.5rem;
-    transform: translateY(38%);
-    background: #F2C2C2;
+    font-size: 2.5rem;
+    padding: 0.5em;
+    
 }
-.leanne, .stephanie, .jody {
-    grid-column: 2/3;
-
+.leanne {
+    grid-row: 1/4;
 }
-.candice, .katy, .sally {
-    grid-column: 3/4;
+.candice {
+    grid-row: 4/7;
 }
-.katy, .jody {
-    grid-row: 2/3;
+.katy {
+    grid-row: 7/10;
 }
-.leanne, .candice, .jody, .katy, .stephanie, .sally {
+.jody {
+  grid-row: 10/13;
+}
+.stephanie {
+    grid-row: 13/16;
+}
+.sally {
+    grid-row: 16/19;
+}
+.zipporah {
+    grid-row: 19/22;
+}
+.leanne, .candice, .jody, .katy, .stephanie, .sally, .zipporah {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    
-}
-.leanne, .candice {
-    margin-bottom: 30px;
-}
-.katy a, .jody a {
-    margin-bottom: 10px;
+    grid-column: 2/3;
 }
 
 .gallery-pics{
