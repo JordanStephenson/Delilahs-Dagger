@@ -277,13 +277,13 @@ footer h2 {
 
 @media only screen and (min-width: 650px) {
     .landing-image img {
-        height: 35vh;
+        height: 25vh;
     }
     .heading h1{
-        font-size: 70px;
+        font-size: 60px;
     }
     .heading h3 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .welcome-section .container {
         width: 60%;
@@ -393,6 +393,9 @@ footer h2 {
 
 }
 @media only screen and (min-width: 900px) {
+    nav {
+        height: 7vh;
+    }
     .nav-links {
         display: inherit;
     }
@@ -422,9 +425,15 @@ footer h2 {
         text-align: left;
         margin-left: 40px;
     }
+    .wrapper {
+        background-color: white;
+        width: 80%;
+        height: 92%;
+        margin: auto;
+    }
     .artists {
         background-color: #0A1D29;
-        height: 80vh;
+        height: 90vh;
         position: relative;
     }
     .artists .container h1 {
@@ -436,18 +445,17 @@ footer h2 {
         top: 20%;
         left: 50%;
         transform: translate(-50%, -20%);
-        background-color: white;
-        height: 80%;
-        width: 80%;
+        height: 90%;
+        width: 70%;
         margin: auto;
         grid-template-columns: repeat(3, minmax(10px, 1fr));
-        grid-row: 1fr 5% 1fr 5%;
-        padding: 150px 0px;
-        grid-gap: 50px 0px;
+        grid-template-rows: repeat(3, 20vh);
+        grid-gap: 40px;
+        padding-top: 120px;
     }
     
     .artists .container img {
-        height: 16vh;
+        height: 14vh;
     }
     .artists .container a {
         background: none;
@@ -463,18 +471,30 @@ footer h2 {
     }
     .leanne {
         grid-column: 1/2;
+        grid-row: 1/2;
     }
     .candice {
         grid-column: 2/3;
+        grid-row: 1/2;
         padding: 0px;
     }
     .katy {
         grid-row: 1/2;
+        grid-column: 3/4;
     }
     .sally {
         grid-row: 2/3;
     }
+    .jody{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
     .stephanie {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .zipporah {
+        grid-row: 3/4;
         grid-column: 1/2;
     }
     .jody .profile-btn{
@@ -573,6 +593,9 @@ footer h2 {
     .address p, .opening-times p {
         width: 80%;
         margin: auto;
+    }
+    .contact{
+        min-height: 90vh;
     }
     .contact h1{
         margin-top: 20px;
