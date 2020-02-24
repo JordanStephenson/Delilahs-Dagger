@@ -23,8 +23,9 @@ nav {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    width: 50%;
-    font-size: 1.2rem;
+    align-items: center;
+    width: 90%;
+    font-size: 1.5rem;
     display: none;
     margin-right: 5%;
 }
@@ -56,11 +57,13 @@ nav {
     font-size: 30px;
 }
 .button {
-    padding: 0.2rem 0.7rem;
+    padding: 0.6rem 1rem;
     background-color: #EAA30B;
 }
 .button a {
     color: black;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 .welcome-section {
     min-height: 50vh;
@@ -112,16 +115,12 @@ nav {
     width: 35vw;
     justify-self: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+
 
 }
 .artists .container a{
-    position: absolute;
-    width: 80%;
-    bottom: 0;
     text-decoration: none;
     color: #0A1D29;
-    padding: 10px 0px;
     font-size: 1.5rem;
     transform: translateY(38%);
     background: #F2C2C2;
@@ -153,7 +152,6 @@ nav {
 .gallery-pics{
   display: grid;
   grid-template-columns: 1fr;
-    
 }
 .img {
     width: 90%;
@@ -165,12 +163,12 @@ nav {
     align-items: center;
     flex-direction: column;
     position: relative;
-    padding-bottom: 50px;
     width: 70%;
     margin: auto;
+    padding-bottom: 70px;
 }
 .gallery h1 {
-    font-size: 30px;
+    font-size: 55px;
     padding: 60px 0px 60px 0px
 }
 .contact {
@@ -180,13 +178,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0px 50px 0px;
+    padding: 40px 0px 50px 0px;
     font-family: 'Cinzel', cursive;
 }
 
 .contact h1 {
     font-size: 40px;
-    padding: 30px 0px;
+    padding: 30px 0px 0px 0px;
     font-weight: bold;
 }
 .contact img {
@@ -374,6 +372,16 @@ footer h2 {
     .img-24 {
         grid-row: 30/32;
     }
+        .contact h1{
+        font-size: 3.5em;
+    
+    }
+    .contact h2{
+        font-size: 2.3em;
+    }
+    .address p, .opening-times p {
+        font-size: 18px;
+    }
 
 }
 @media only screen and (min-width: 900px) {
@@ -409,21 +417,41 @@ footer h2 {
     .artists {
         background-color: #0A1D29;
         height: 80vh;
-        display: flex;
+        position: relative;
+    }
+    .artists .container h1 {
+        font-size: 3.5em;
     }
    
     .artists .container {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
         background-color: white;
-        height: 70%;
-        width: 70%;
+        height: 80%;
+        width: 80%;
         margin: auto;
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-row: 1fr 5% 1fr 5%;
+        padding: 150px 0px;
+        grid-gap: 50px 0px;
+    }
     
+    .artists .container img {
+        height: 16vh;
     }
     .artists .container a {
         background: none;
         padding: 0px;
+        font-size: 2.5em;
+    }
+    .leanne, .candice {
+        margin-bottom: 0px;
+    
+    }
+    .katy a, .jody a {
+        margin-bottom: 0px;
     }
     .leanne {
         grid-column: 1/2;
@@ -445,12 +473,11 @@ footer h2 {
         position: inherit;
         
     }
-    .gallery h1 {
-        font-size: 3em;
+    .gallery .container {
+        padding-bottom: 0px;
     }
-    .underline {
-        width: 90%;
-        padding-bottom: 60px;
+    .gallery h1 {
+        font-size: 3.5em;
     }
     .gallery-pics {
         grid-template-columns: repeat(3, minmax(10px, 1fr));
@@ -525,12 +552,8 @@ footer h2 {
     .img-22, .img-23, .img-24 {
         grid-row: 17/19;
     }
-    .contact h1{
-        font-size: 3.5em;
-    
-    }
-    .contact h2{
-        font-size: 2.3em;
+    .contact {
+        padding-top: 0px;
     }
     .opening-times{
         padding-top: 8%;
@@ -541,10 +564,11 @@ footer h2 {
     }
     .address p, .opening-times p {
         width: 80%;
-        font-size: 18px;
         margin: auto;
     }
-  
+    .contact h1{
+        margin-top: 20px;
+    }
     .info {
     flex-direction: row; 
     }
