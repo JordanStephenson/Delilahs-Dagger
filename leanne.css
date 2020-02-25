@@ -10,7 +10,7 @@ header {
     align-items: center;
     justify-content: center;
     color: white;
-    height: 10vh;
+    height: 13vh;
 }
 .sub-hero {
     display: flex;
@@ -26,6 +26,9 @@ header {
     justify-content: space-around;
     margin-top: 15%;
     height: 23%;
+}
+.profile-pic h2 {
+    font-size: 30px;
 }
 .profile-pic img:nth-child(1) {
     margin-bottom: 10% ;
