@@ -94,18 +94,22 @@ nav {
     font-family: 'Cinzel', serif;
     line-height: 150%;
 }
+
+.description p {
+    width: 80%;
+}
 .artists {
     background-color: #FFEEDE;
 }
 .artists .container{
     padding: 150px 0px 70px 0px;
     display: grid;
-    grid-template-columns: 1% 1fr 1%;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(21, 8vh);
     grid-gap: 50px 0px;
     align-items: center;
     position: relative;
-    width: 70%; 
+    width: 60%; 
     margin: auto;
 }
 .artists .container h1 {
@@ -127,7 +131,7 @@ nav {
     font-size: 2.5rem;
     padding: 0.5em;
     background: #F2C2C2;
-    width: 88%;
+    width: 100%;
     text-align: center;
     
 }
@@ -447,60 +451,63 @@ footer h2 {
     }
     .welcome-section {
         min-height: 30vh;
-        display: flex;
-        justify-content: center;
         
+    }
+    .artists .container img {
+        width: 70%;
     }
     .welcome-section .container{
         display: flex;
         align-items: center;
         width: 80%;
     }
-    
-
+    .description, .headline {
+        width: 80%;
+        padding: 0px 20px;
+    }
     .headline {
         text-align: right;
-        min-width: 50%;
     }
     .description {
         text-align: left;
-        min-width: 50%;
+        margin-left: 40px;
     }
-
-    .welcome-section .container .description p {
-        width: 80%;
-        margin: auto;
-    }
-   
     .wrapper {
         background-color: white;
         width: 70%;
-        height: 90%;
+        height: 92%;
         margin: auto;
     }
     .artists {
         background-color: #0A1D29;
-        height: 100vh;
+        height: 90vh;
         position: relative;
     }
     .artists .container h1 {
-        font-size: 4em;
-        top: 5%;
+        font-size: 3.5em;
     }
    
     .artists .container {
-        padding-top: 200px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        height: 90%;
+        width: 60%;
+        margin: auto;
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-template-rows: repeat(3, 20vh);
         grid-gap: 40px 0px;
+        padding-top: 120px;
     }
     
     .artists .container img {
         height: 14vh;
-        width: 70%;
     }
     .artists .container a {
-        background: none;
+        padding: 0.2em;
+        font-size: 2em;
+        width: 70%;
     }
     .leanne, .candice {
         margin-bottom: 0px;
@@ -546,7 +553,7 @@ footer h2 {
         padding-bottom: 0px;
     }
     .gallery h1 {
-        font-size: 4.5em;
+        font-size: 3.5em;
     }
     .gallery-pics {
         grid-template-columns: repeat(3, minmax(10px, 1fr));
@@ -655,13 +662,15 @@ footer h2 {
 
 }
 @media only screen and (min-width: 1600px) {
-    .description p, .headline h1{
-        width: 80%;
-        padding: 0px 20px;
-        margin: auto;
+    .headline, .description {
+        width: 50%;
     }
     .artists {
-        height: 140vh;
+        height: 130vh;
+    }
+    .artists .container h1 {
+        font-size: 70px;
+        top: .5%;
     }
     .wrapper {
         height: 91%;
@@ -670,22 +679,21 @@ footer h2 {
     .artists .container {
         grid-template-rows: repeat(3, 30vh);
         grid-gap: 60px;
-        padding: 200px 0px 0px 0px;
+        padding: 160px 0px 100px 0px;
     } 
     .artists .container img {
-        height: 22vh;
+        height: 20vh;
         width: 15vw;
     }
-    .artists .container h1 {
-        font-size: 70px;
-        top: 4%;
-    }
     .artists .container a {
-        font-size: 3em;
+        padding: 1.2rem 0px;
+        font-size: 2.7rem;
+        width: 86%
     }
-   
-  
 }
-
-
+@media only screen and (min-width: 2000px) {
+    .welcome-section .description p {
+        width: 8%;
+    }
+}
 
