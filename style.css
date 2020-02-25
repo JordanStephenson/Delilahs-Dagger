@@ -265,7 +265,7 @@ nav {
     
 }
 footer {
-    height: 45px;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,7 +274,7 @@ footer {
 footer h2 {
     color: white;
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.8;
 }
 
