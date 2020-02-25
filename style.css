@@ -126,6 +126,9 @@ nav {
     color: #0A1D29;
     font-size: 2.5rem;
     padding: 0.5em;
+    background: #F2C2C2;
+    width: 100%;
+    text-align: center;
     
 }
 .leanne {
@@ -304,6 +307,9 @@ footer h2 {
     .artists .container img {
         height: 20vh;
         width: 30vw;
+    }
+    .artists .container a {
+        width: 87%;
     }
     .leanne {
         grid-column: 1/2;
@@ -494,9 +500,9 @@ footer h2 {
         height: 14vh;
     }
     .artists .container a {
-        background: none;
-        padding: 0px;
-        font-size: 2.5em;
+        padding: 0.2em;
+        font-size: 2em;
+        width: 70%;
     }
     .leanne, .candice {
         margin-bottom: 0px;
