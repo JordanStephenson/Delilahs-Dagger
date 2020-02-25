@@ -8,10 +8,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: white;
     height: 10vh;
 }
-.hero {
+.sub-hero {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -54,4 +55,49 @@ header {
     width: 70%;
     margin-top: 10%;
     
+}
+@media only screen and (min-width: 650px) {
+    .banner h1 {
+        font-size: 50px;
+    }
+    .banner h3 {
+        font-size: 25px;
+    }
+    .wrapper {
+        min-height: 81vh;
+        display: flex;
+        justify-content: center;
+    }
+    .sub-hero {
+        width: 85%;
+        min-height: 65vh;
+        margin: auto;
+        justify-content: center;
+    }
+    .profile-pic {
+        flex-direction: column-reverse;
+        margin-top: 56px;
+        margin-right: 10px;
+
+    }
+    .profile-pic img{
+        height: 19vh;
+        margin-bottom: 0px;
+        padding-top: 20px;
+    }
+    .profile-pic h2 {
+        font-size: 30px;
+    }
+    .pictures {
+        display: flex ;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .banner {
+        margin: 50px 0px;
+    }
+
+  
 }
