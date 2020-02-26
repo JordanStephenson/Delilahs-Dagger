@@ -17,7 +17,7 @@ header {
     align-items: center;
     flex-direction: column;
     background-color: white;
-    min-height: 95vh;
+    min-height: 75vh;
 }
 .profile-pic{
     display: flex;
@@ -44,6 +44,8 @@ header {
 }
 .mini-gallery img {
     padding: 10px;
+    height: 150px;
+    width: 150px;
 }
 .show-desktop {
     display: none;
@@ -61,6 +63,7 @@ header {
     font-family: 'Cinzel', cursive;
     width: 70%;
     margin-top: 5%;
+    padding-bottom: 30px;
     
 }
 @media only screen and (min-width: 650px) {
@@ -161,16 +164,14 @@ header {
     .banner {
         margin: 100px 0px;
     }
-    
+
     .banner h1 {
         font-size: 70px;
     }
     .banner h3 {
         font-size: 40px;
     }
-    .wrapper {
-        width: 80%;
-    }
+   
     .profile-pic img{
        height: 36vh;
     }
