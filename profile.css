@@ -30,8 +30,10 @@ header {
 .profile-pic h2 {
     font-size: 30px;
 }
-.profile-pic img:nth-child(1) {
-    margin-bottom: 10% ;
+.profile-pic img {
+    margin-bottom: 10%;
+    height: 20vh;
+    
 }
 .mini-gallery {
     display: grid;
@@ -43,9 +45,11 @@ header {
 .mini-gallery img {
     padding: 10px;
 }
+.show-desktop {
+    display: none;
+}
 .mini-gallery img:nth-child(1){
     grid-column: 2/3;
-
 }
 .mini-gallery img:nth-child(4){
     grid-column: 3/4;
@@ -56,7 +60,7 @@ header {
 .bio {
     font-family: 'Cinzel', cursive;
     width: 70%;
-    margin-top: 10%;
+    margin-top: 5%;
     
 }
 @media only screen and (min-width: 650px) {
@@ -70,22 +74,21 @@ header {
         min-height: 81vh;
         display: flex;
         justify-content: center;
+        width: 85%;
+        margin: auto;
     }
     .sub-hero {
-        width: 85%;
         min-height: 65vh;
         margin: auto;
         justify-content: center;
     }
     .profile-pic {
         flex-direction: column-reverse;
-        margin-top: 56px;
-        margin-right: 10px;
+        margin-top: 0;
 
     }
     .profile-pic img{
-        height: 19vh;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         padding-top: 20px;
     }
     .profile-pic h2 {
@@ -94,13 +97,117 @@ header {
     .pictures {
         display: flex ;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        
     }
+    .mini-gallery {
+        margin-top: 0;
+        margin-left: 10px;
+        align-self: flex-end;
+    }
+  
 }
 @media only screen and (min-width: 900px) {
     .banner {
         margin: 50px 0px;
     }
+    .profile-pic h2 {
+        font-size: 40px;
+    }
+       
+    .wrapper {
+        width: 85%;
+    }
+    .sub-hero {
+        padding-bottom: 130px;
+    }
+    .pictures {
+        margin-top: 130px;
+    }
+    .profile-pic img{
+        height: 25vh;
+     }
+    .mini-gallery {
+        grid-template-columns: repeat(3, minmax(10px, 1fr));
+        grid-template-rows: repeat(3, 120px);
+    }
+    .mini-gallery img {
+        height: 120px;
+        width: 120px;
+    }
+    .show-desktop {
+        display: inherit;
+    }
+    .mini-gallery img:nth-child(1){
+        grid-column: 1/2;
+    }
+    .mini-gallery img:nth-child(2){
+        grid-column: 2/3;
+    }
+    .mini-gallery img:nth-child(3){
+        grid-column: 3/4;
+    }
+    .mini-gallery img:nth-child(4){
+        grid-row: 2/3;
+    }
+    .bio {
+        font-size: 1.5em;
+    }
+    
 
   
+}
+@media only screen and (min-width: 1200px) {
+    .banner {
+        margin: 100px 0px;
+    }
+    
+    .banner h1 {
+        font-size: 70px;
+    }
+    .banner h3 {
+        font-size: 40px;
+    }
+    .wrapper {
+        width: 80%;
+    }
+    .profile-pic img{
+       height: 36vh;
+    }
+    .profile-pic h2 {
+        font-size: 50px;
+    }
+    .mini-gallery {
+        grid-template-columns: repeat(3, minmax(10px, 1fr));
+        grid-template-rows: repeat(3, 180px);
+    }
+    .mini-gallery img {
+        height: 180px;
+        width: 180px;
+    }
+    .bio {
+        font-size: 2em;
+    }
+
+}
+@media only screen and (min-width: 1700px) {
+
+    .wrapper {
+        width: 70%;
+    }
+    .profile-pic {
+        margin-right: 20px;
+    }
+  
+    .profile-pic img{
+        height: 40vh;
+     }
+     .mini-gallery {
+         grid-template-columns: repeat(3, minmax(10px, 1fr));
+         grid-template-rows: repeat(3, 200px);
+     }
+     .mini-gallery img {
+         height: 200px;
+         width: 200px;
+     }
 }
