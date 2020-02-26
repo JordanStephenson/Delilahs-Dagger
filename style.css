@@ -98,11 +98,11 @@ nav {
     background-color: #FFEEDE;
 }
 .artists .container{
-    padding: 150px 0px 70px 0px;
+    padding: 150px 0px 80px 0px;
     display: grid;
     grid-template-columns: 1% 1fr 1%;
     grid-template-rows: repeat(21, 8vh);
-    grid-gap: 50px 0px;
+    grid-gap: 60px 0px;
     align-items: center;
     position: relative;
     width: 70%; 
@@ -121,7 +121,10 @@ nav {
     width: 60vw;
     justify-self: center;
 }
-.artists .container a{
+.pic-tag {
+    text-align: center;
+}
+.profile-btn{
     text-decoration: none;
     color: #0A1D29;
     font-size: 2.5rem;
@@ -129,6 +132,8 @@ nav {
     background: #F2C2C2;
     width: 88%;
     text-align: center;
+    transform: translateY(-5%);
+    
     
 }
 .leanne {
@@ -309,7 +314,7 @@ footer h2 {
         height: 20vh;
         width: 30vw;
     }
-    .artists .container a {
+    .profile-btn {
         width: 87%;
     }
     .leanne {
@@ -499,7 +504,7 @@ footer h2 {
         height: 14vh;
         width: 70%;
     }
-    .artists .container a {
+    .profile-btn {
         background: none;
     }
     .leanne, .candice {
@@ -686,7 +691,7 @@ footer h2 {
         font-size: 70px;
         top: 4%;
     }
-    .artists .container a {
+    .profile-btn{
         font-size: 3em;
     }
    

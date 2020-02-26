@@ -28,11 +28,12 @@ header {
     height: 23%;
 }
 .profile-pic h2 {
-    font-size: 30px;
+    font-size: 45px;
+    font-weight: bold;
 }
 .profile-pic img {
     margin-bottom: 10%;
-    height: 20vh;
+    height: 27vh;
     
 }
 .mini-gallery {
@@ -93,10 +94,9 @@ header {
     .profile-pic img{
         margin-bottom: 10px;
         padding-top: 20px;
+        height: 23vh;
     }
-    .profile-pic h2 {
-        font-size: 30px;
-    }
+  
     .pictures {
         display: flex ;
         align-items: center;
@@ -107,6 +107,9 @@ header {
         margin-top: 0;
         margin-left: 10px;
         align-self: flex-end;
+    }
+    .bio {
+        font-size: 1.3em;
     }
   
 }
