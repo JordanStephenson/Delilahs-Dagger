@@ -167,13 +167,113 @@ nav {
 
 .gallery-pics{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, minmax(10px, 1fr));
+  grid-template-rows: repeat(24, 450px);
+  grid-gap: 16px;
+  width: 100%;
 }
-.img {
-    width: 90%;
-    padding: 5px 0px;
-    margin: auto;
+#index-gallery .img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
 }
+#index-gallery .img-1 {
+    background-image: url(/IMG/Gallery/tattoo-1\ 1.png);
+}
+#index-gallery .img-2 {
+    background-image: url(/IMG/Gallery/kerie-1\ 1.png);
+}
+#index-gallery .img-3 {
+    background-image: url(IMG/Gallery/kerie-2\ 1.png);
+}
+#index-gallery .img-4 {
+    background-image: url(/IMG/Gallery//leanne-5\ 1.png);
+}
+#index-gallery .img-5 {
+    background-image: url(IMG/Gallery/leanne-2\ 1.png);
+}
+#index-gallery .img-6 {
+    background-image: url(IMG/Gallery/katy-3\ 1.png);
+}
+#index-gallery .img-7 {
+    background-image: url(IMG/Gallery/kerie-6\ 1.png);
+}
+#index-gallery .img-8 {
+    background-image: url(IMG/Gallery/kerie-8\ 1.png);
+}
+#index-gallery .img-9 {
+    background-image: url(IMG/Gallery/kerie-5\ 1.png);
+}
+#index-gallery .img-10 {
+    background-image: url(IMG/Gallery/jodie-3\ 1.png);
+}
+#index-gallery .img-11 {
+    background-image: url(/IMG/Gallery/stephanie-1\ 1.png);
+}
+#index-gallery .img-12 {
+    background-image: url(/IMG/Gallery/leanne-3\ 1.png);
+}
+#index-gallery .img-13 {
+    background-image: url(/IMG/Gallery/tattoo-10\ 1.png);
+}
+#index-gallery .img-14 {
+    background-image: url(/IMG/Gallery/tattoo-9\ 1.png);
+}
+#index-gallery .img-15 {
+    background-image: url(/IMG/Gallery/tattoo-8\ 1.png);
+}
+#index-gallery .img-16 {
+    background-image: url(/IMG/Gallery/katy-2\ 1.png);
+}
+#index-gallery .img-17 {
+    background-image: url(/IMG/Gallery/tattoo-6\ 1.png);
+}
+#index-gallery .img-18 {
+    background-image: url(/IMG/Gallery/stephanie-4\ 1.png);
+}
+#index-gallery .img-19 {
+    background-image: url(/IMG/Gallery/jodie-1\ 1.png);
+}
+#index-gallery .img-20 {
+    background-image: url(/IMG/Gallery/stephanoe-3\ 1.png);
+}
+#index-gallery .img-21 {
+    background-image: url(/IMG/Gallery/tattoo-7\ 1.png);
+}
+#index-gallery .img-22 {
+    background-image: url(/IMG/Gallery/jodie-2\ 1.png);
+}
+#index-gallery .img-23 {
+    background-image: url(/IMG/Gallery/Kerie-art\ 2.png);
+}
+#index-gallery .img-24 {
+    background-image: url(/IMG/sally-9.jpg);
+}
+.img div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img a {
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+    z-index: 2;
+}
+.img div:hover {
+    opacity: 0.5;
+    transition: all ease-in-out 100ms;
+}
+
+
 .gallery .container {
     display: flex;
     align-items: center;
@@ -549,6 +649,7 @@ footer h2 {
     }
     .gallery .container {
         padding-bottom: 0px;
+        
     }
     .gallery h1 {
         font-size: 4.5em;
@@ -556,13 +657,16 @@ footer h2 {
     .gallery-pics {
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-template-rows: repeat(19, 10vw);
+        
     }
     .img {
         grid-row: inherit;
+        
     }
     .img-1 {
         grid-row: 1/4 ;
         grid-column: 1/2;
+        
     }
     .img-2 {
         grid-row: 1/3 ;
