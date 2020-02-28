@@ -1,14 +1,13 @@
 let galleryImages = document.querySelectorAll('.gallery-pics .img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
-let imgType = 'png';
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
         image.addEventListener('click', () => {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-            let getImgUrlPos = getFullImgUrl.split('/IMG/Gallery');
+            let getImgUrlPos = getFullImgUrl.split('IMG/Gallery');
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
@@ -75,7 +74,7 @@ function changeImg(changeDir) {
             calcNewImg = galleryImages.length;
         }
     }
-    newImg.setAttribute('src', 'img/Gallery/img' + calcNewImg + '.png');
+    newImg.setAttribute('src', 'IMG/Gallery/img' + calcNewImg + '.png');
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;
