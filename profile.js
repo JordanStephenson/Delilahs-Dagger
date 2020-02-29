@@ -1,4 +1,4 @@
-let galleryImages = document.querySelectorAll('.gallery-pics .img');
+let galleryImages = document.querySelectorAll('.mini-gallery img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
@@ -7,7 +7,7 @@ if(galleryImages) {
         image.addEventListener('click', () => {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-            let getImgUrlPos = getFullImgUrl.split('IMG/thumb/');
+            let getImgUrlPos = getFullImgUrl.split('IMG/sally-pics');
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
@@ -20,7 +20,7 @@ if(galleryImages) {
 
             let newImg = document.createElement('img');
             newImgWindow.appendChild(newImg); 
-            newImg.setAttribute('src', 'IMG/gallery/' + setNewImgUrl);
+            newImg.setAttribute('src', 'IMG/sally-pics' + setNewImgUrl);
             newImg.setAttribute('id', 'current-img');
 
             newImg.onload = function() {
@@ -74,20 +74,10 @@ function changeImg(changeDir) {
             calcNewImg = galleryImages.length;
         }
     }
-    newImg.setAttribute('src', 'IMG/gallery/img' + calcNewImg + '.png');
+    newImg.setAttribute('src', 'IMG/sally-pics/img' + calcNewImg + '.png');
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;
 
-        newImg.onload = function() {
-            let imgWidth = this.width;
-            let calcImgToEdge = ((windowWidth -imgWidth) / 2) - 80;
-
-            let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
-
-            let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left: '+ calcImgToEdge + 'px;';
-        }
 
 }

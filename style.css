@@ -182,76 +182,76 @@ nav {
     text-align: center;
 }
 #index-gallery .img-1 {
-    background-image: url(IMG/Gallery/img1.png);
+    background-image: url(IMG/thumb/img1.png);
 }
 #index-gallery .img-2 {
-    background-image: url(IMG/Gallery/img2.png);
+    background-image: url(IMG/thumb/img2.png);
 }
 #index-gallery .img-3 {
-    background-image: url(IMG/Gallery/img3.png);
+    background-image: url(IMG/thumb/img3.png);
 }
 #index-gallery .img-4 {
-    background-image: url(IMG/Gallery/img4.png);
+    background-image: url(IMG/thumb/img4.png);
 }
 #index-gallery .img-5 {
-    background-image: url(IMG/Gallery/img5.png);
+    background-image: url(IMG/thumb/img5.png);
 }
 #index-gallery .img-6 {
-    background-image: url(IMG/Gallery/img6.png);
+    background-image: url(IMG/thumb/img6.png);
 }
 #index-gallery .img-7 {
-    background-image: url(IMG/Gallery/img7.png);
+    background-image: url(IMG/thumb/img7.png);
 }
 #index-gallery .img-8 {
-    background-image: url(IMG/Gallery/img8.png);
+    background-image: url(IMG/thumb/img8.png);
 }
 #index-gallery .img-9 {
-    background-image: url(IMG/Gallery/img9.png);
+    background-image: url(IMG/thumb/img9.png);
 }
 #index-gallery .img-10 {
-    background-image: url(IMG/Gallery/img10.png);
+    background-image: url(IMG/thumb/img10.png);
 }
 #index-gallery .img-11 {
-    background-image: url(IMG/Gallery/img11.png);
+    background-image: url(IMG/thumb/img11.png);
 }
 #index-gallery .img-12 {
-    background-image: url(IMG/Gallery/img12.png);
+    background-image: url(IMG/thumb/img12.png);
 }
 #index-gallery .img-13 {
-    background-image: url(IMG/Gallery/img13.png);
+    background-image: url(IMG/thumb/img13.png);
 }
 #index-gallery .img-14 {
-    background-image: url(IMG/Gallery/img14.png);
+    background-image: url(IMG/thumb/img14.png);
 }
 #index-gallery .img-15 {
-    background-image: url(IMG/Gallery/img15.png);
+    background-image: url(IMG/thumb/img15.png);
 }
 #index-gallery .img-16 {
-    background-image: url(IMG/Gallery/img16.png);
+    background-image: url(IMG/thumb/img16.png);
 }
 #index-gallery .img-17 {
-    background-image: url(IMG/Gallery/img17.png);
+    background-image: url(IMG/thumb/img17.png);
 }
 #index-gallery .img-18 {
-    background-image: url(IMG/Gallery/img18.png);
+    background-image: url(IMG/thumb/img18.png);
 }
 #index-gallery .img-19 {
-    background-image: url(IMG/Gallery/img19.png);
+    background-image: url(IMG/thumb/img19.png);
 }
 #index-gallery .img-20 {
-    background-image: url(IMG/Gallery/img20.png);
+    background-image: url(IMG/thumb/img20.png);
 }
 #index-gallery .img-21 {
-    background-image: url(IMG/Gallery/img21.png);
+    background-image: url(IMG/thumb/img21.png);
 }
 #index-gallery .img-22 {
-    background-image: url(IMG/Gallery/img22.png);
+    background-image: url(IMG/thumb/img22.png);
 }
 #index-gallery .img-23 {
-    background-image: url(IMG/Gallery/img23.png);
+    background-image: url(IMG/thumb/img23.png);
 }
 #index-gallery .img-24 {
-    background-image: url(IMG/Gallery/img24.jpg);
+    background-image: url(IMG/thumb/img24.png);
 }
 /* Pop-up window when clicked*/
 .img-window {
@@ -290,7 +290,7 @@ nav {
 
 
 
-.img div {
+.img div, .profile-img div {
     width: 100%;
     height: 100%;
     background-color: black;
@@ -299,12 +299,12 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.img a {
+.img a, .profile-img a {
     text-transform: uppercase;
     color: white;
     font-size: 18px;
 }
-.img div:hover {
+.img div:hover, .profile-img div:hover {
     opacity: 0.5;
     transition: all ease-in-out 100ms;
 }
@@ -704,15 +704,15 @@ footer h2 {
         grid-column: 1/2;
         
     }
-    .img-2 {
-        grid-row: 1/3 ;
-        grid-column: 2/4;
-    }
     .img-3 {
+        grid-row: 1/3 ;
+        grid-column: 2/3;
+    }
+    .img-2 {
         grid-row: 3/5;
         grid-column: 2/3;
     }
-    .img-4 {
+    .img-7 {
         grid-row: 3/6 ;
         grid-column: 3/4;
     }
@@ -723,7 +723,7 @@ footer h2 {
         grid-row: 5/7; 
         grid-column:2/3;
     }
-    .img-7 {
+    .img-4 {
         grid-row: 6/8;
 
     }
@@ -731,6 +731,9 @@ footer h2 {
         grid-row: 7/9;
     }
     .img-9 {
+        grid-row: 6/8;
+    }
+    .img-14 {
         grid-row: 6/8 ;
     }
     .img-10, .img-11 {
@@ -745,11 +748,14 @@ footer h2 {
     .img-14 {
         grid-row: 10/13;
     }
+    .img-15 {
+        grid-row: 1/3;
+    }
     .img-16 {
         grid-row: 12/14;
     }
     .img-17 {
-        grid-row: 13/15;
+        grid-row: 12/15;
     }
     .img-18 {
         grid-row: 13/15;
