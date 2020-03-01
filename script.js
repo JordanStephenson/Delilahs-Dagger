@@ -7,7 +7,7 @@ if(galleryImages) {
         image.addEventListener('click', () => {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-            let getImgUrlPos = getFullImgUrl.split('IMG/thumb/');
+            let getImgUrlPos = getFullImgUrl.split('IMG/thumb');
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
@@ -20,7 +20,7 @@ if(galleryImages) {
 
             let newImg = document.createElement('img');
             newImgWindow.appendChild(newImg); 
-            newImg.setAttribute('src', 'IMG/gallery/' + setNewImgUrl);
+            newImg.setAttribute('src', 'IMG/gallery' + setNewImgUrl);
             newImg.setAttribute('id', 'current-img');
 
             newImg.onload = function() {
