@@ -4,6 +4,7 @@ body {
 header {
     height: 5vh;
 }
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -18,6 +19,11 @@ header {
     flex-direction: column;
     background-color: white;
     min-height: 75vh;
+}
+.pictures {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 .profile-pic{
     display: flex;
@@ -40,25 +46,213 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 110px);
     margin-top: 8%;
+    grid-gap: 10px;
+    margin-right: 10px;
 }
 
-.mini-gallery img {
-    padding: 10px;
-    height: 150px;
-    width: 150px;
+.mini-gallery .profile-img {
+    width: 110px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
 }
-.show-desktop {
+
+/* Leanne pics */
+
+#leanne-gallery .profile-img1 {
+    background-image: url(IMG/leanne-thumb/img1.png);
+}
+#leanne-gallery .profile-img2 {
+    background-image: url(IMG/leanne-thumb/img2.png);
+}
+#leanne-gallery .profile-img3 {
+    background-image: url(IMG/leanne-thumb/img4.png);
+}
+#leanne-gallery .profile-img4 {
+    background-image: url(IMG/leanne-thumb/img3.png);
+}
+#leanne-gallery .profile-img5 {
+    background-image: url(IMG/leanne-thumb/img5.png);
+}
+#leanne-gallery .profile-img6 {
+    background-image: url(IMG/leanne-thumb/img6.png);
+}
+#leanne-gallery .profile-img7 {
+    background-image: url(IMG/leanne-thumb/img7.png);
+}
+#leanne-gallery .profile-img8 {
+    background-image: url(IMG/leanne-thumb/img8.png);
+}
+#leanne-gallery .profile-img9 {
+    background-image: url(IMG/leanne-thumb/img9.png);
+}
+
+/* Jodie pics */
+
+#jodie-gallery .profile-img1 {
+    background-image: url(IMG/jodie-img/jodie-img1.png);
+}
+#jodie-gallery .profile-img2 {
+    background-image: url(IMG/jodie-img/jodie-img2.png);
+}
+#jodie-gallery .profile-img3 {
+    background-image: url(IMG/jodie-img/jodie-img3.png);
+}
+#jodie-gallery .profile-img4 {
+    background-image: url(IMG/jodie-img/jodie-img4.png);
+}
+#jodie-gallery .profile-img5 {
+    background-image: url(IMG/jodie-img/jodie-img5.png);
+}
+#jodie-gallery .profile-img6 {
+    background-image: url(IMG/jodie-img/jodie-img6.png);
+}
+#jodie-gallery .profile-img7 {
+    background-image: url(IMG/jodie-img/jodie-img7.png);
+}
+#jodie-gallery .profile-img8 {
+    background-image: url(IMG/jodie-img/jodie-img8.png);
+}
+#jodie-gallery .profile-img9 {
+    background-image: url(IMG/jodie-img/jodie-img9.png);
+}
+
+/* Sally pics */
+
+#sally-gallery .profile-img1 {
+    background-image: url(IMG/sally-thumb/img1.png);
+}
+#sally-gallery .profile-img2 {
+    background-image: url(IMG/sally-thumb/img2.png);
+}
+#sally-gallery .profile-img3 {
+    background-image: url(IMG/sally-thumb/img3.png);
+}
+#sally-gallery .profile-img4 {
+    background-image: url(IMG/sally-thumb/img4.png);
+}
+#sally-gallery .profile-img5 {
+    background-image: url(IMG/sally-thumb/img5.png);
+}
+#sally-gallery .profile-img6 {
+    background-image: url(IMG/sally-thumb/img6.png);
+}
+#sally-gallery .profile-img7 {
+    background-image: url(IMG/sally-thumb/img7.png);
+}
+#sally-gallery .profile-img8 {
+    background-image: url(IMG/sally-thumb/img8.png);
+}
+#sally-gallery .profile-img9 {
+    background-image: url(IMG/sally-thumb/img9.png);
+}
+
+/* Steph pics */
+
+#steph-gallery .profile-img1 {
+    background-image: url(IMG/steph-thumb/img1.png);
+}
+#steph-gallery .profile-img2 {
+    background-image: url(IMG/steph-thumb/img2.png);
+}
+#steph-gallery .profile-img3 {
+    background-image: url(IMG/steph-thumb/img3.png);
+}
+#steph-gallery .profile-img4 {
+    background-image: url(IMG/steph-thumb/img4.png);
+}
+#steph-gallery .profile-img5 {
+    background-image: url(IMG/steph-thumb/img5.png);
+}
+#steph-gallery .profile-img6 {
+    background-image: url(IMG/steph-thumb/img6.png);
+}
+#steph-gallery .profile-img7 {
+    background-image: url(IMG/stephanie-8.webp);
+}
+#steph-gallery .profile-img8 {
+    background-image: url(IMG/stephanie-9.webp);
+}
+#steph-gallery .profile-img9 {
+    background-image: url(IMG/steph-gallery-img.webp);
+}
+
+/* Katy pics */
+
+#katy-gallery .profile-img1 {
+    background-image: url(IMG/katy-img/katy-img1.png);
+}
+#katy-gallery .profile-img2 {
+    background-image: url(IMG/katy-img/Katy-img2.png);
+}
+#katy-gallery .profile-img3 {
+    background-image: url(IMG/katy-img/katy-img3.png);
+}
+#katy-gallery .profile-img4 {
+    background-image: url(IMG/katy-img/katy-img4.png);
+}
+#katy-gallery .profile-img5 {
+    background-image: url(IMG/katy-img/katy-img5.png);
+}
+#katy-gallery .profile-img6 {
+    background-image: url(IMG/katy-img/katy-img6.png);
+}
+#katy-gallery .profile-img7 {
+    background-image: url(IMG/katy-img/katy-img7.png);
+}
+#katy-gallery .profile-img8 {
+    background-image: url(IMG/katy-img/katy-img8.png);
+}
+#katy-gallery .profile-img9 {
+    background-image: url(IMG/katy-img/katy-img9.png);
+}
+
+/* Candice pics */
+
+#candice-gallery .profile-img1 {
+    background-image: url(IMG/candice-img/candice-img1.png);
+}
+#candice-gallery .profile-img2 {
+    background-image: url(IMG/candice-img/candice-img2.png);
+}
+#candice-gallery .profile-img3 {
+    background-image: url(IMG/candice-img/candice-img3.png);
+}
+#candice-gallery .profile-img4 {
+    background-image: url(IMG/candice-img/candice-img4.png);
+}
+#candice-gallery .profile-img5 {
+    background-image: url(IMG/candice-img/candice-img5.png);
+}
+#candice-gallery .profile-img6 {
+    background-image: url(IMG/candice-img/candice-img6.png);
+}
+#candice-gallery .profile-img7 {
+    background-image: url(IMG/candice-img/candice-img7.png);
+}
+#candice-gallery .profile-img8 {
+    background-image: url(IMG/candice-img/candice-img8.png);
+}
+#candice-gallery .profile-img9 {
+    background-image: url(IMG/candice-img/candice-img9.png);
+}
+
+
+.hide-mobile {
     display: none;
 }
-.mini-gallery img:nth-child(1){
+.mini-gallery .profile-img1{
     grid-column: 2/3;
 }
-.mini-gallery img:nth-child(4){
+.mini-gallery .profile-img2{
     grid-column: 3/4;
 }
-.mini-gallery img:nth-child(3){
+.mini-gallery .profile-img3{
     grid-column: 2/3;
 }
 .bio {
@@ -93,14 +287,13 @@ header {
 
     }
     .profile-pic img{
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         padding-top: 20px;
         height: 23vh;
     }
   
     .pictures {
-        display: flex ;
-        align-items: center;
+        flex-direction: row;
         justify-content: space-around;
         
     }
@@ -115,6 +308,7 @@ header {
   
 }
 @media only screen and (min-width: 900px) {
+    
     .banner {
         margin: 50px 0px;
     }
@@ -137,26 +331,31 @@ header {
     .mini-gallery {
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-template-rows: repeat(3, 120px);
+        grid-gap: 0px 10px;
+        margin-top: 20px;
     }
     .mini-gallery img {
         height: 120px;
         width: 120px;
         cursor: pointer;
     }
-    .show-desktop {
+    .hide-mobile {
         display: inherit;
     }
-    .mini-gallery img:nth-child(1){
+    .profile-img1 {
         grid-column: 1/2;
     }
-    .mini-gallery img:nth-child(2){
+    .profile-img2{
         grid-column: 2/3;
     }
-    .mini-gallery img:nth-child(3){
+    .profile-img3{
         grid-column: 3/4;
     }
-    .mini-gallery img:nth-child(4){
+    .profile-img4{
         grid-row: 2/3;
+    }
+    .profile-img9 {
+        grid-row: 1/2;
     }
     .bio {
         font-size: 1.2em;
@@ -177,17 +376,22 @@ header {
         font-size: 40px;
     }
    
+    .profile-pic {
+        margin-top: 90px;
+    }
     .profile-pic img{
        height: 36vh;
     }
     .profile-pic h2 {
         font-size: 50px;
+        margin-bottom: 30px;
     }
     .mini-gallery {
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-template-rows: repeat(3, 180px);
+        grid-gap: 10px;
     }
-    .mini-gallery img {
+    .mini-gallery .profile-img {
         height: 180px;
         width: 180px;
     }
@@ -212,7 +416,7 @@ header {
          grid-template-columns: repeat(3, minmax(10px, 1fr));
          grid-template-rows: repeat(3, 200px);
      }
-     .mini-gallery img {
+     .profile-img {
          height: 200px;
          width: 200px;
      }

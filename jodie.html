@@ -11,14 +11,16 @@
 <body>
     <header>
         <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+            <ul class="nav-links show-desktop hide-mobile" id="nav">
+                <li id="exit" class="exit-btn hide-desktop"><img src="IMG/exit.png" alt=""></li>
+                <li><a href="#artists">Artists</a></li>
                 <li><a href="#">Piercing</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#contact">Contatct</a></li>
-                <li class="button"><a href="#">Book In</a></li>
+                <li id="primary-btn" class="button"><a href="#">Book In</a></li>
             </ul>
-          <img src="IMG/burger.png" alt="" class="burger">
+            
+          <img src="IMG/burger.png" alt="" class="burger hide-desktop" id="menu">
         </nav>
     </header>
     <div class="banner">
@@ -32,16 +34,34 @@
         <img src="IMG/jodie-profile.webp" alt="">
         <h2>Jodie</h2>
     </div>
-    <div class="mini-gallery">
-        <img src="IMG/jodie-1.webp" alt="">
-        <img src="IMG/jodie-2.webp" alt="">
-        <img src="IMG/jodie-3.webp" alt="">
-        <img src="IMG/jodie-4.webp" alt="">
-        <img class="show-desktop" src="IMG/jodie-5.webp" alt="">
-        <img class="show-desktop" src="IMG/jodies-6.webp" alt="">
-        <img class="show-desktop" src="IMG/jodie-7.webp" alt="">
-        <img class="show-desktop" src="IMG/jodie-8.webp" alt="">
-        <img class="show-desktop" src="IMG/jodie-9.webp" alt="">
+    <div id="jodie-gallery" class="mini-gallery">
+        <div class="profile-img profile-img1">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img2">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img3">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img4">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img5 hide-mobile">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img6 hide-mobile">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img7 hide-mobile">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img8 hide-mobile">
+            <div class=""><a href="#"></a>View</div>
+        </div>
+        <div class="profile-img profile-img9 hide-mobile">
+            <div class=""><a href="#"></a>View</div>
+        </div>
     </div>
 </div>
     <div class="bio">
@@ -53,5 +73,6 @@
 <footer>
     <h2>@Delilah’s Dagger 2020</h2>
 </footer>
+<script src="jodie.js"></script>
 </body>
 </html>

@@ -1,13 +1,26 @@
-let galleryImages = document.querySelectorAll('.mini-gallery img');
+let galleryImages = document.querySelectorAll('.mini-gallery .profile-img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+const exit = document.getElementById('exit');
+
+menu.addEventListener('click', (e) => {
+    nav.classList.toggle('hide-mobile');
+    e.preventDefault();
+});
+exit.addEventListener( 'click', (e) => {
+    nav.classList.add('hide-mobile');
+    e.preventDefault();
+} )
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
         image.addEventListener('click', () => {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-            let getImgUrlPos = getFullImgUrl.split('IMG/sally-pics');
+            let getImgUrlPos = getFullImgUrl.split('IMG/leanne-thumb');
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
@@ -20,7 +33,7 @@ if(galleryImages) {
 
             let newImg = document.createElement('img');
             newImgWindow.appendChild(newImg); 
-            newImg.setAttribute('src', 'IMG/sally-pics' + setNewImgUrl);
+            newImg.setAttribute('src', 'IMG/leanne-img' + setNewImgUrl);
             newImg.setAttribute('id', 'current-img');
 
             newImg.onload = function() {
@@ -74,7 +87,7 @@ function changeImg(changeDir) {
             calcNewImg = galleryImages.length;
         }
     }
-    newImg.setAttribute('src', 'IMG/sally-pics/img' + calcNewImg + '.png');
+    newImg.setAttribute('src', 'IMG/leanne-img/img' + calcNewImg + '.png');
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;

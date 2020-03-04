@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Dancing Script', cursive;
+    font-family: '`Cinzel', cursive;
 }
 nav {
     position: fixed;
@@ -21,31 +21,54 @@ nav {
     height: 16px;
     cursor: pointer;
 }
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    align-items: center;
-    width: 90%;
-    font-size: 1.5rem;
+.hide-mobile {
     display: none;
-    margin-right: 5%;
-}
-.nav-links a {
+  }
+
+  .nav-links {
+    list-style: none;
+    position: fixed;
+    width: 60%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background: #0A1D29;
+    height: 100%;
+    z-index: 7;
+    padding-top: 3em;
+  }
+
+  .nav-links li a {
     text-decoration: none;
     color: white;
-}
+    display: block;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    margin: 100px 0px;
+  }
+  .nav-links li a:hover {
+    background-color: rgb(65, 73, 78);
+  }
+  .exit-btn {
+    margin-bottom: 1em;
+    margin-top: -1.3em;
+    text-align: right;
+    padding: 0px 1.4em;
+  }
+  .exit-btn img {
+    cursor: pointer;
+    
+  }
 .landing-page {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-bottom: 50px;
 }
-.landing-image {
-    margin: 20px 0px;
-}
+
 .landing-image img {
     height: 25vh;
 }
@@ -60,13 +83,19 @@ nav {
     font-size: 30px;
 }
 .button {
-    padding: 0.6rem 1rem;
     background-color: #EAA30B;
 }
-.button a {
+#primary-btn a {
     color: black;
     font-weight: bold;
     text-transform: uppercase;
+    background-color: #EAA30B;
+
+}
+#primary-btn a:hover {
+    color: white;
+
+    
 }
 .welcome-section {
     min-height: 50vh;
@@ -164,6 +193,7 @@ nav {
     position: relative;
     grid-column: 2/3;
 }
+
 
 .gallery-pics{
   display: grid;
@@ -419,7 +449,10 @@ footer h2 {
     opacity: 0.8;
 }
 
+
+
 @media only screen and (min-width: 650px) {
+    
     .landing-image img {
         height: 25vh;
     }
@@ -580,11 +613,45 @@ footer h2 {
 }
 @media only screen and (min-width: 900px) {
    
-    .nav-links {
-        display: inherit;
+    .nav-links li a {
+        margin: 0px;
     }
+    .show-desktop {
+        display: block;
+      }
+      .hide-desktop {
+        display: none;
+      }
+      .nav-links {
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        height: 7vh;
+        padding-top: 0px;
+      }
+      .nav-links li {
+        float: left;
+      }
+      .nav-links li a {
+        color: white;
+        background-color: inherit;
+        text-align: right;
+        font-size: 1.5em;
+      }
+      
     .burger {
         display: none;
+    }
+    #primary-btn a {
+        color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.6rem 1rem;
     }
     .welcome-section {
         min-height: 30vh;

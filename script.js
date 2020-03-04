@@ -2,6 +2,24 @@ let galleryImages = document.querySelectorAll('.gallery-pics .img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
+
+  
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+const exit = document.getElementById('exit');
+const links = document.querySelectorAll('.nav-links li a');
+
+menu.addEventListener('click', (e) => {
+    nav.classList.toggle('hide-mobile');
+    e.preventDefault();
+});
+exit.addEventListener( 'click', (e) => {
+    nav.classList.add('hide-mobile');
+    e.preventDefault();
+} )
+
+
+
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
         image.addEventListener('click', () => {
@@ -79,15 +97,6 @@ function changeImg(changeDir) {
 
     getLatestOpenedImg = calcNewImg;
 
-        newImg.onload = function() {
-            let imgWidth = this.width;
-            let calcImgToEdge = ((windowWidth -imgWidth) / 2) - 80;
 
-            let nextBtn = document.querySelector('.img-btn-next');
-            nextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
-
-            let prevBtn = document.querySelector('.img-btn-prev');
-            prevBtn.style.cssText = 'left: '+ calcImgToEdge + 'px;';
-        }
 
 }
