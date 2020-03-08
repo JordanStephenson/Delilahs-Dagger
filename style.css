@@ -7,14 +7,14 @@ body {
     font-family: '`Cinzel', cursive;
 }
 nav {
-    position: fixed;
     width: 100%;
-    z-index: 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 7vh;
+    position: fixed;
     background-color: #0A1D29;
+    z-index: 100;
 }
 .burger {
     margin-right: 5%;
@@ -38,18 +38,15 @@ nav {
     padding-top: 3em;
   }
 
-  .nav-links li a {
+  .nav-links a {
     text-decoration: none;
     color: white;
-    display: block;
-    width: 100%;
-    padding: 1em;
-    text-align: center;
-    margin: 70px 0px;
-  }
-  .nav-links li a:hover {
-    background-color: rgb(65, 73, 78);
-  }
+    transition: all 0.2s ease-in-out;
+    font-size: 1.2em;
+}
+.nav-links a:hover {
+    color: #EAA30B;
+}
   .exit-btn {
     margin-bottom: 1em;
     margin-top: -1.3em;
@@ -64,9 +61,18 @@ nav {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+    background-image: url(IMG/gallery/img18.png);
+    background-size: cover;
+    height: 90vh;
+}
+.landing-page h2 {
+    font-size: 30px;
+    background-color: #eee;
+    padding: 8px 24px;
+    border-radius: 16px;
 }
 
 .landing-image img {
@@ -84,12 +90,14 @@ nav {
 }
 .button {
     background-color: #EAA30B;
+    
 }
 #primary-btn a {
     color: black;
     font-weight: bold;
     text-transform: uppercase;
     background-color: #EAA30B;
+    border-radius: 5px;
 
 }
 #primary-btn a:hover {
@@ -124,23 +132,26 @@ nav {
     line-height: 150%;
 }
 .artists {
-    background-color: #FFEEDE;
+    background-image: url(IMG/marble.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 0px 150px 0px;
 }
 .artists .container{
     padding: 150px 0px 80px 0px;
     display: grid;
     grid-template-columns: 1% 1fr 1%;
-    grid-template-rows: repeat(21, 8vh);
-    grid-gap: 60px 0px;
+    grid-template-rows: repeat(21, 5vh);
+    grid-gap: 200px 0px;
     align-items: center;
     position: relative;
-    width: 70%; 
+    width: 80%; 
     margin: auto;
 }
 .artists .container h1 {
     position: absolute;
     right: 50%;
-    top: 1%;
+    top: 0;
     transform: translateX(50%);
     font-size: 50px;
     color: #0A1D29;
@@ -149,42 +160,63 @@ nav {
     height: 25vh;
     width: 60vw;
     justify-self: center;
+    border-radius: 5px;
 }
 .pic-tag {
     text-align: center;
 }
 .profile-btn{
     text-decoration: none;
-    color: #0A1D29;
+    color: #eee;
     font-size: 2.5rem;
     padding: 0.5em;
-    background: #F2C2C2;
-    width: 88%;
+    background: #0A1D29;
+    width: 100%;
     text-align: center;
-    transform: translateY(-5%);
-    
-    
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);  
 }
+.profile-btn:hover {
+    color: rgb(201, 162, 162);
+    transition: all 0.2s ease-in-out;
+}
+
 .leanne {
     grid-row: 1/4;
+    background-image: url(img/leanne-profile.jpg);
 }
 .candice {
     grid-row: 4/7;
+    background-image: url(img/candice-profile.jpg);
 }
 .katy {
     grid-row: 7/10;
+    background-image: url(img/katy-profile.jpg);
 }
 .jody {
   grid-row: 10/13;
+  background-image: url(img/gallery/img7.png);
 }
 .stephanie {
     grid-row: 13/16;
+    background-image: url(img/gallery/img16.png);
 }
 .sally {
     grid-row: 16/19;
+    background-image: url(img/sally-img/img1.png);
 }
 .zipporah {
     grid-row: 19/22;
+    background-image: url(img/zipporah\ profile.webp);
+}
+.leanne-img, .candice-img, .jodie-img, .katy-img, .stephanie-img, .sally-img, .zipporah-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    grid-column: 2/3;
+    
 }
 .leanne, .candice, .jody, .katy, .stephanie, .sally, .zipporah {
     display: flex;
@@ -192,7 +224,30 @@ nav {
     align-items: center;
     position: relative;
     grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
 }
+.leanne div, .candice div, .jody div, .katy div, .stephanie div, .sally div, .zipporah div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+}
+.leanne div:hover, .candice div:hover, .jody div:hover, .katy div:hover, .stephanie div:hover, .sally div:hover, .zipporah div:hover{
+    opacity: 0.5;
+   }
 
 
 .gallery-pics{
@@ -328,6 +383,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 .img a, .profile-img a {
     text-transform: uppercase;
@@ -352,6 +408,12 @@ nav {
 .gallery h1 {
     font-size: 55px;
     padding: 60px 0px 60px 0px
+}
+.banner {
+    height: 50vh;
+    background-image: url(img/gallery/img2.png);
+    background-attachment: fixed;
+    background-size: cover;
 }
 .contact {
     background-color: #0A1D29;
@@ -453,8 +515,8 @@ footer h2 {
 
 @media only screen and (min-width: 650px) {
     
-    .landing-image img {
-        height: 25vh;
+    .landing-page h2 {
+        font-size: 60px;
     }
     .heading h1{
         font-size: 60px;
@@ -475,16 +537,13 @@ footer h2 {
     .artists .container {
         grid-template-columns: repeat(2, minmax(10px, 1fr));
         grid-template-rows: repeat(4, 27vh);
-        grid-gap: 80px;
+        grid-gap: 200px 80px;
         width: 80%;
         
     }
     .artists .container img {
         height: 20vh;
         width: 30vw;
-    }
-    .profile-btn {
-        width: 87%;
     }
     .leanne {
         grid-column: 1/2;
@@ -682,41 +741,38 @@ footer h2 {
    
     .wrapper {
         background-color: white;
-        width: 70%;
+        width: 90%;
         height: 90%;
         margin: auto;
+        border-radius: 5px;
     }
     .artists {
         background-color: #0A1D29;
-        height: 100vh;
+        height: 140vh;
         position: relative;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     .artists .container h1 {
         font-size: 4em;
-        top: 5%;
+        top: 3%;
     }
    
     .artists .container {
         padding-top: 200px;
         grid-template-columns: repeat(3, minmax(10px, 1fr));
         grid-template-rows: repeat(3, 20vh);
-        grid-gap: 40px 0px;
+        grid-gap: 150px 50px;
+        width: 80%;
     }
-    
-    .artists .container img {
-        height: 14vh;
-        width: 70%;
-    }
+
     .profile-btn {
         background: none;
+        color: #0A1D29;
     }
-    .leanne, .candice {
-        margin-bottom: 0px;
-    
-    }
-    .katy a, .jody a {
-        margin-bottom: 0px;
-    }
+  
+   
     .leanne {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -746,10 +802,7 @@ footer h2 {
         grid-row: 3/4;
         grid-column: 1/2;
     }
-    .jody .profile-btn{
-        position: inherit;
-        
-    }
+    
     .gallery .container {
         padding-bottom: 0px;
         
@@ -764,6 +817,7 @@ footer h2 {
     }
     .img {
         grid-row: inherit;
+        border-radius: 5px;
         
     }
     .img-1 {
@@ -885,15 +939,14 @@ footer h2 {
         margin: auto;
     }
     .artists {
-        height: 140vh;
+        height: 180vh;
     }
     .wrapper {
-        height: 91%;
-        
+        height: 90%;;
     }
     .artists .container {
         grid-template-rows: repeat(3, 30vh);
-        grid-gap: 60px;
+        grid-gap: 150px 80px;
         padding: 200px 0px 0px 0px;
     } 
     .artists .container img {
@@ -902,7 +955,7 @@ footer h2 {
     }
     .artists .container h1 {
         font-size: 70px;
-        top: 4%;
+        top: 2%;
     }
     .profile-btn{
         font-size: 3em;

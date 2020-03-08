@@ -18,7 +18,54 @@ exit.addEventListener( 'click', (e) => {
     e.preventDefault();
 } )
 
+/* Link scrolling */
+function smoothScroll(target,duration) {
+    var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top; 
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
 
+    function animation(currentTime) {
+        if(startTime === null) {
+            startTime = currentTime;
+        }
+        var timeElapsed = currentTime - startTime;
+        var run = Math.easeInOutQuad(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if(timeElapsed < duration) requestAnimationFrame(animation);
+    }
+    Math.easeInOutQuad = function (t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    };
+
+    requestAnimationFrame(animation);
+}
+var artists = document.querySelector('.artists-link');
+var contact = document.querySelector('.contact-link');
+
+artists.addEventListener('click', function() {
+    smoothScroll(".artists", 1000);
+});
+
+contact.addEventListener('click', function() {
+    smoothScroll(".contact", 3000);
+});
+
+
+/* Parallax */
+
+const parallax = document.getElementById('parallax');
+
+window.addEventListener('scroll', function() {
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+});
+
+/* View gallery image */
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
@@ -66,12 +113,16 @@ if(galleryImages) {
     });
 }
 
+/* Close gallery image */
+
 function closeImg() {
     document.querySelector('.img-window').remove();
     document.querySelector('.img-btn-next').remove();
     document.querySelector('.img-btn-prev').remove();
 
 }
+/* Change gallery image */
+
 function changeImg(changeDir) {
     document.querySelector('#current-img').remove();
 
