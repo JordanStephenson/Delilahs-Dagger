@@ -18,42 +18,18 @@ exit.addEventListener( 'click', (e) => {
     e.preventDefault();
 } )
 
-/* Link scrolling */
-function smoothScroll(target,duration) {
-    var target = document.querySelector(target);
-    var targetPosition = target.getBoundingClientRect().top; 
-    var startPosition = window.pageYOffset;
-    var distance = targetPosition - startPosition;
-    var startTime = null;
+/* JQuery smooth scrolling */
+$('.nav-links a').on('click', function(e) {
+    if(this.hash !== '') {
+        e.preventDefault();
 
-    function animation(currentTime) {
-        if(startTime === null) {
-            startTime = currentTime;
-        }
-        var timeElapsed = currentTime - startTime;
-        var run = Math.easeInOutQuad(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if(timeElapsed < duration) requestAnimationFrame(animation);
+        const hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top 
+        }, 1500)
     }
-    Math.easeInOutQuad = function (t, b, c, d) {
-        t /= d/2;
-        if (t < 1) return c/2*t*t + b;
-        t--;
-        return -c/2 * (t*(t-2) - 1) + b;
-    };
-
-    requestAnimationFrame(animation);
-}
-var artists = document.querySelector('.artists-link');
-var contact = document.querySelector('.contact-link');
-
-artists.addEventListener('click', function() {
-    smoothScroll(".artists", 1000);
-});
-
-contact.addEventListener('click', function() {
-    smoothScroll(".contact", 3000);
-});
+})
 
 
 /* Parallax */
