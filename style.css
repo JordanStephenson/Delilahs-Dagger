@@ -187,31 +187,31 @@ nav {
 
 .leanne {
     grid-row: 1/4;
-    background-image: url(img/leanne-profile.jpg);
+    background-image: url(IMG/leanne-profile.jpg);
 }
 .candice {
     grid-row: 4/7;
-    background-image: url(img/candice-profile.jpg);
+    background-image: url(IMG/candice-profile.jpg);
 }
 .katy {
     grid-row: 7/10;
-    background-image: url(img/katy-profile.jpg);
+    background-image: url(IMG/katy-profile.jpg);
 }
 .jody {
   grid-row: 10/13;
-  background-image: url(img/gallery/img7.png);
+  background-image: url(IMG/gallery/img7.png);
 }
 .stephanie {
     grid-row: 13/16;
-    background-image: url(img/gallery/img16.png);
+    background-image: url(IMG/gallery/img16.png);
 }
 .sally {
     grid-row: 16/19;
-    background-image: url(img/sally-img/img1.png);
+    background-image: url(IMG/sally-img/img1.png);
 }
 .zipporah {
     grid-row: 19/22;
-    background-image: url(img/zipporah\ profile.webp);
+    background-image: url(IMG/zipporah\ profile.webp);
 }
 .leanne-img, .candice-img, .jodie-img, .katy-img, .stephanie-img, .sally-img, .zipporah-img {
     display: flex;
