@@ -418,7 +418,7 @@ nav {
 }
 .banner {
     height: 50vh;
-    background-image: url(img/gallery/img2.png);
+    background-image: url(IMG/gallery/img2.png);
     background-attachment: fixed;
     background-size: cover;
 }
