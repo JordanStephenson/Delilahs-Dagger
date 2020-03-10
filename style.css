@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +33,7 @@ nav {
   .nav-links {
     list-style: none;
     position: fixed;
-    width: 60%;
+    width: 50%;
     top: 0;
     right: 0;
     text-align: left;
@@ -39,13 +41,29 @@ nav {
     height: 100%;
     z-index: 7;
     padding-top: 3em;
+    text-align: center;
+
   }
 
   .nav-links a {
     text-decoration: none;
     color: white;
     transition: all 0.2s ease-in-out;
-    font-size: 1.2em;
+    font-size: 1.5em;
+}
+.nav-links li {
+    margin-top: 20%;
+
+}
+.nav-links li:nth-child(1) {
+    margin-top: 0;
+}
+.nav-active {
+    transform: translateX(0%);
+}
+
+.nav-links li:last-child {
+    padding: .5em;
 }
 .nav-links a:hover {
     color: #EAA30B;
@@ -64,7 +82,7 @@ nav {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding-bottom: 50px;
     background-image: url(IMG/gallery/img18.png);
@@ -76,11 +94,21 @@ nav {
     background-color: #eee;
     padding: 8px 24px;
     border-radius: 16px;
+    color: #0A1D29;
+    margin-bottom: 100px;
 }
-
-.landing-image img {
-    height: 25vh;
-}
+.scroll {
+    animation: move 1s infinite alternate 2s;
+    height: 35vh;
+  }
+  @keyframes move {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(30px);
+    }
+  }
 .heading {
     text-align: center;
     color: #0A1D29;
@@ -219,7 +247,6 @@ nav {
     align-items: center;
     position: relative;
     grid-column: 2/3;
-    
 }
 .leanne, .candice, .jody, .katy, .stephanie, .sally, .zipporah {
     display: flex;
@@ -234,6 +261,7 @@ nav {
     background-position: center;
     cursor: pointer;
     text-align: center;
+    border-radius: 5px;
 }
 .leanne div, .candice div, .jody div, .katy div, .stephanie div, .sally div, .zipporah div {
     width: 100%;
@@ -247,6 +275,7 @@ nav {
     left: 0;
     top: 0;
     transition: all 0.2s ease-in-out;
+    border-radius: 5px;
 }
 .leanne div:hover, .candice div:hover, .jody div:hover, .katy div:hover, .stephanie div:hover, .sally div:hover, .zipporah div:hover{
     opacity: 0.5;
@@ -498,12 +527,16 @@ nav {
     outline: none;
     width: 100%;
     color: white;
+    transition: all 0.5s ease;
 }
 .input-group:last-child input{
     padding: 3em 4em;
-
-    
 }
+
+.input-group input:focus {
+    border-color: #EAA30B;
+  }
+
 footer {
     height: 8vh;
     display: flex;
@@ -678,9 +711,14 @@ footer h2 {
 
 }
 @media only screen and (min-width: 900px) {
-   
+    .nav-links li {
+        margin-top: 0;
+    }
     .nav-links li a {
         margin: 0px;
+    }
+    .nav-links li:last-child {
+        padding: 0;
     }
     .show-desktop {
         display: block;

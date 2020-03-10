@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
 body {
-    background-image: url(img/marble.jpg);
+    background-image: url(IMG/marble.jpg);
     background-attachment: fixed;
 }
 header {

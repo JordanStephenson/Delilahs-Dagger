@@ -8,18 +8,62 @@ const menu = document.getElementById('menu');
 const nav = document.getElementById('nav');
 const exit = document.getElementById('exit');
 const links = document.querySelectorAll('.nav-links li a');
+const liLinks = document.querySelectorAll('.nav-links li');
+const burger = document.querySelector('.burger');
+
 
 menu.addEventListener('click', (e) => {
     nav.classList.toggle('hide-mobile');
-    e.preventDefault();
-});
+        e.preventDefault();
+    });
+
 exit.addEventListener( 'click', (e) => {
     nav.classList.add('hide-mobile');
     e.preventDefault();
-} )
+} );
+links.forEach(link =>{
+    link.addEventListener('click', (e) =>{
+        nav.classList.add('hide-mobile');
+    e.preventDefault();
+    })
+});
+
+/* Timeline animations*/
+
+var tl = new TimelineMax();
+
+tl.from('.landing-page', 2, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0);
+tl.from('.landing-page h2', 2, {
+    opacity: 0,
+    y: 10,
+    ease: Power2.easeOut
+}, .5) ;
+tl.from('.scroll', 2, {
+    opacity: 0,
+    y: 10,
+    ease: Power2.easeOut
+}, 1) ;
+
+
+
 
 /* JQuery smooth scrolling */
 $('.nav-links a').on('click', function(e) {
+    if(this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top 
+        }, 1500)
+    }
+})
+$('.dagger-img a').on('click', function(e) {
     if(this.hash !== '') {
         e.preventDefault();
 
@@ -123,7 +167,5 @@ function changeImg(changeDir) {
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;
-
-
 
 }
