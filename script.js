@@ -4,29 +4,35 @@ let windowWidth = window.innerWidth;
 
 
   
-const menu = document.getElementById('menu');
-const nav = document.getElementById('nav');
-const exit = document.getElementById('exit');
-const links = document.querySelectorAll('.nav-links li a');
-const liLinks = document.querySelectorAll('.nav-links li');
-const burger = document.querySelector('.burger');
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
 
+//Toggle nav
 
-menu.addEventListener('click', (e) => {
-    nav.classList.toggle('hide-mobile');
-        e.preventDefault();
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        
+        //Animate links
+
+    navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+            link.style.animation = ''
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        }
+
     });
+    //Burger animation
+    burger.classList.toggle('toggle');
 
-exit.addEventListener( 'click', (e) => {
-    nav.classList.add('hide-mobile');
-    e.preventDefault();
-} );
-links.forEach(link =>{
-    link.addEventListener('click', (e) =>{
-        nav.classList.add('hide-mobile');
-    e.preventDefault();
-    })
 });
+
+}
+navSlide();
+
+
 
 /* Timeline animations*/
 
