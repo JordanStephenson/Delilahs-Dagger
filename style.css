@@ -21,8 +21,24 @@ nav {
     background-color: #0A1D29;
     z-index: 100;
 }
+.social-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    opacity: 0;
+}
+.social{
+    color: white;
+    height: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.social:hover{
+    opacity: 0.8;
+}
 .burger {
     margin-right: 20px;
+    cursor: pointer;
 }
 .burger div {
     width: 25px;
@@ -88,6 +104,16 @@ nav {
         transform: translateX(0px);
     }
 }
+@keyframes fadeOut{
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
 .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -104,16 +130,7 @@ nav {
 .nav-links a:hover {
     color: #EAA30B;
 }
-  .exit-btn {
-    margin-bottom: 1em;
-    margin-top: -1.3em;
-    text-align: right;
-    padding: 0px 1.4em;
-  }
-  .exit-btn img {
-    cursor: pointer;
-    
-  }
+
 .landing-page {
     min-height: 60vh;
     display: flex;
@@ -121,21 +138,54 @@ nav {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-    background-image: url(IMG/gallery/img18.png);
+    background-image: url(IMG/jodie-studio);
     background-size: cover;
     height: 90vh;
 }
+.landing-page:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
 .landing-page h2 {
-    font-size: 30px;
-    background-color: #eee;
-    padding: 8px 24px;
-    border-radius: 16px;
-    color: #0A1D29;
+    font-size: 50px;
+    color: white;
     margin-bottom: 100px;
 }
+.cta {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+#primary-btn  {
+    color: #0A1D29;
+    font-family: 'Dancing script', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: url(IMG/marble.jpg);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 30px;
+    padding: .5em 1em;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+#primary-btn:hover {
+    color: white;
+
+    
+}
+
 .scroll {
     animation: move 1s infinite alternate 2s;
-    height: 35vh;
+    height: 25vh;
     display: none;
   }
   @keyframes move {
@@ -143,7 +193,7 @@ nav {
       transform: translateY(0px);
     }
     to {
-      transform: translateY(30px);
+      transform: translateY(10px);
     }
   }
 .heading {
@@ -160,19 +210,7 @@ nav {
     background-color: #EAA30B;
     
 }
-#primary-btn a {
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #EAA30B;
-    border-radius: 5px;
 
-}
-#primary-btn a:hover {
-    color: white;
-
-    
-}
 .welcome-section {
     min-height: 50vh;
     display: flex;
@@ -484,7 +522,7 @@ nav {
 }
 .banner {
     height: 50vh;
-    background-image: url(IMG/gallery/img2.png);
+    background-image: url(IMG/katy-studio);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -574,6 +612,12 @@ nav {
     border-color: #EAA30B;
   }
 
+#map {
+    height: 400px;
+    width: 80vw;
+    margin-top: 50px;
+}
+
 footer {
     height: 8vh;
     display: flex;
@@ -587,13 +631,17 @@ footer h2 {
     font-size: 15px;
     opacity: 0.8;
 }
-
+#map h1{
+    color: #0A1D29;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
 
 
 @media only screen and (min-width: 650px) {
     
     .landing-page h2 {
-        font-size: 60px;
+        font-size: 70px;
     }
     .heading h1{
         font-size: 60px;
@@ -748,6 +796,8 @@ footer h2 {
 
 }
 @media only screen and (min-width: 900px) {
+    
+    
     .nav-links li {
         margin-top: 0;
         opacity: 1;
@@ -780,12 +830,17 @@ footer h2 {
         text-align: right;
         font-size: 1.5em;
       }
+      .social-links {
+        width: 10%;
+        opacity: 1;
+    }
+
       
     .burger {
         display: none;
     }
-    #primary-btn a {
-        color: black;
+    #primary-btn  {
+    
         font-weight: bold;
         text-transform: uppercase;
         padding: 0.6rem 1rem;
@@ -894,7 +949,7 @@ footer h2 {
         
     }
     #index-gallery .container {
-        width: 80%;
+        width: 90%;
         padding-bottom: 100px;
     }
     .img {
@@ -994,6 +1049,7 @@ footer h2 {
     }
     .contact{
         min-height: 90vh;
+        padding-top: 50px;
     }
     .contact h1{
         margin-top: 20px;

@@ -8,7 +8,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-
+    const socialLinks = document.querySelector('.social-links');
 //Toggle nav
 
     burger.addEventListener('click', () => {
@@ -22,7 +22,7 @@ const navSlide = () => {
         } else {
             link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
         }
-
+        socialLinks.style.animation = 'navLinkFade 0.5s ease forwards 1.2s';
     });
     //Burger animation
     burger.classList.toggle('toggle');
@@ -53,6 +53,11 @@ tl.from('.scroll', 2, {
     y: 10,
     ease: Power2.easeOut
 }, 1) ;
+tl.from('.profile-pic', 2, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0);
 
 
 
@@ -102,13 +107,12 @@ if(galleryImages) {
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
-
             let container = document.body;
             let newImgWindow = document.createElement('div');
+            
             container.appendChild(newImgWindow);
             newImgWindow.setAttribute('class', 'img-window');
             newImgWindow.setAttribute('onclick', 'closeImg()' );
-
             let newImg = document.createElement('img');
             newImgWindow.appendChild(newImg); 
             newImg.setAttribute('src', 'IMG/gallery' + setNewImgUrl);
@@ -118,6 +122,7 @@ if(galleryImages) {
                 let imgWidth = this.width;
                 let calcImgToEdge = ((windowWidth -imgWidth) / 2) - 80;
 
+                newImg.style.animation = `navLinkFade 0.7s ease forwards`;
                 let newPrevBtn = document.createElement('a');
                 let btnPrevText = document.createTextNode('Prev');
                 newPrevBtn.appendChild(btnPrevText);
@@ -128,16 +133,22 @@ if(galleryImages) {
     
                 let newNextBtn = document.createElement('a');
                 let btnNextText = document.createTextNode('Next');
+       
+                newPrevBtn.style.animation = `navLinkFade 0.7s ease forwards`;
+ 
                 newNextBtn.appendChild(btnNextText);
                 container.appendChild(newNextBtn);
                 newNextBtn.setAttribute('class', 'img-btn-next');
                 newNextBtn.setAttribute('onclick', 'changeImg(1)');
                 newNextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
+                newNextBtn.style.animation = `navLinkFade 0.7s ease forwards`;
             };
  
         });
     });
 }
+
+/* Animate images */
 
 /* Close gallery image */
 
@@ -145,6 +156,7 @@ function closeImg() {
     document.querySelector('.img-window').remove();
     document.querySelector('.img-btn-next').remove();
     document.querySelector('.img-btn-prev').remove();
+    
 
 }
 /* Change gallery image */
@@ -155,6 +167,7 @@ function changeImg(changeDir) {
     let getImgWindow = document.querySelector('.img-window');
     let newImg = document.createElement('img');
     getImgWindow.appendChild(newImg);
+    newImg.style.animation = `navLinkFade 0.7s ease forwards`;
 
     let calcNewImg;
     if(changeDir === 1) {

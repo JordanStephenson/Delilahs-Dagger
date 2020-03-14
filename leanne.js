@@ -6,14 +6,54 @@ const menu = document.getElementById('menu');
 const nav = document.getElementById('nav');
 const exit = document.getElementById('exit');
 
-menu.addEventListener('click', (e) => {
-    nav.classList.toggle('hide-mobile');
-    e.preventDefault();
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    const socialLinks = document.querySelector('.social-links');
+//Toggle nav
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        
+        //Animate links
+
+    navLinks.forEach((link, index) => {
+        if(link.style.animation) {
+            link.style.animation = ''
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        }
+        socialLinks.style.animation = 'navLinkFade 0.5s ease forwards 1.2s';
+    });
+    //Burger animation
+    burger.classList.toggle('toggle');
+
 });
-exit.addEventListener( 'click', (e) => {
-    nav.classList.add('hide-mobile');
-    e.preventDefault();
-} )
+
+}
+navSlide();
+
+/* Timeline animations*/
+
+var tl = new TimelineMax();
+
+
+tl.from('.profile-banner', 1.5, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0);
+tl.from('.profile-pic', 1.5, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0.5);
+tl.from('.mini-gallery', 1.5, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0.5);
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
@@ -39,7 +79,8 @@ if(galleryImages) {
             newImg.onload = function() {
                 let imgWidth = this.width;
                 let calcImgToEdge = ((windowWidth -imgWidth) / 2) - 80;
-
+                
+                newImg.style.animation = `navLinkFade 0.7s ease forwards`;
                 let newPrevBtn = document.createElement('a');
                 let btnPrevText = document.createTextNode('Prev');
                 newPrevBtn.appendChild(btnPrevText);
@@ -48,6 +89,7 @@ if(galleryImages) {
                 newPrevBtn.setAttribute('onclick', 'changeImg(0)');
                 newPrevBtn.style.cssText = 'left: '+ calcImgToEdge + 'px;';
     
+                newPrevBtn.style.animation = `navLinkFade 0.7s ease forwards`;
                 let newNextBtn = document.createElement('a');
                 let btnNextText = document.createTextNode('Next');
                 newNextBtn.appendChild(btnNextText);
@@ -55,11 +97,13 @@ if(galleryImages) {
                 newNextBtn.setAttribute('class', 'img-btn-next');
                 newNextBtn.setAttribute('onclick', 'changeImg(1)');
                 newNextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
+                newNextBtn.style.animation = `navLinkFade 0.7s ease forwards`;
             };
  
         });
     });
 }
+
 
 function closeImg() {
     document.querySelector('.img-window').remove();
@@ -73,6 +117,7 @@ function changeImg(changeDir) {
     let getImgWindow = document.querySelector('.img-window');
     let newImg = document.createElement('img');
     getImgWindow.appendChild(newImg);
+    newImg.style.animation = `navLinkFade 0.7s ease forwards`;
 
     let calcNewImg;
     if(changeDir === 1) {

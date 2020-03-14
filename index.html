@@ -15,7 +15,11 @@
                 <li><a class="artists-link" href="#artists">Artists</a></li>
                 <li><a href="#index-gallery">Our Work</a></li>
                 <li><a class="contact-link" href="index.html#contact">Contatct</a></li>
-                <li id="primary-btn" class="button"><a href="#">Book In</a></li>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/delilahsdaggertattoo/?hl=en" target="_blank"><img class="social" src="IMG/instagram.png" alt=""></a>
+                    <a href="https://en-gb.facebook.com/Delilahsdaggertattoo/" target="_blank"><img class="social" src="IMG/facebook.png" alt=""></a>
+                    <a href="https://www.google.com/search?sxsrf=ALeKk02sh2uwRuZRECjpDsGMOVWiz1qdHA:1584104443765&q=delilah%27s+dagger+tattoo&spell=1&sa=X&ved=2ahUKEwinlKH1wJfoAhXSoVwKHQSSD60QBSgAegQIFRAn" target="_blank"><img class="social" src="IMG/location.png" alt=""></a>
+            </div>
             </ul>
             <div class="burger hide-desktop">
                 <div class="line1"></div>
@@ -25,12 +29,16 @@
         </nav>
     </header>
 <section id="parallax" class="landing-page">
+    <div class="cta">
     <div>
         <h2>Delilah’s Dagger</h2>
     </div>
+    
     <div class="dagger-img"> 
-        <a href="#about"><img class="scroll" src="IMG/dagger-cutout-edit.png" alt=""></a>
+        <a href="#about"><img class="scroll" src="IMG/Dagger-logo 1-cutout.png" alt=""></a>
     </div>
+    <a href="#" id="primary-btn" class="button">Book In</a>
+</div>
 </section>
     <section id="about"class="welcome-section">
         <div class="container">
@@ -229,12 +237,42 @@
             <input class="text-area" type="text-area">
     </form>
 </div>
+<div id="map">
+
+</div>
 </section>
 <footer>
-    <h2>@Delilah’s Dagger 2020</h2>
+    <h2>© 2023 by Shades of Pink.</h2>
 </footer>
+<script>
+    //Map options
+    function initMap(){
+        let options = {
+            zoom: 15,
+            center: {lat:51.4275993, lng:-0.0398935}
+        }
+         //New map
+        let map = new google.maps.Map(document.getElementById('map'), options);
+
+         //Add marker
+         let marker = new google.maps.Marker({
+             position: {lat:51.4275993, lng:-0.0398935},
+             map:map
+         });
+
+         var infoWindow = new google.maps.InfoWindow({
+             content: "<h1>Delialah's Dagger</h1>"
+         });
+
+         marker.addListener('click', function(){
+             infoWindow.open(map, marker);
+         });
+    }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6zVEMNr6bcBoTl8dSJf12WnQtbvlKdyA&callback=initMap"
+    async defer></script>
 <script src="script.js"></script>
 </body>
 </html>
