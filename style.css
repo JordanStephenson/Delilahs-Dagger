@@ -18,7 +18,7 @@ nav {
     align-items: center;
     height: 7vh;
     position: fixed;
-    background-color: #0A1D29;
+    background-color: #111;
     z-index: 100;
 }
 .social-links {
@@ -28,7 +28,7 @@ nav {
     opacity: 0;
 }
 .social{
-    color: white;
+    color: black;
     height: 15px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -62,8 +62,8 @@ nav {
     top: 7vh;
     right: 0;
     text-align: left;
-    background: #0A1D29;
-    height: 93vh;
+    background: #111;
+    height: 100vh;
     z-index: 7;
     padding-top: 3em;
     text-align: center;
@@ -130,57 +130,121 @@ nav {
 .nav-links a:hover {
     color: #EAA30B;
 }
-
-.landing-page {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-    background-image: url(IMG/jodie-studio);
-    background-size: cover;
+.slider {
+    position: relative;
+    overflow: hidden;
     height: 90vh;
+    width: 100vw;
 }
-.landing-page:after {
+.landing-page .title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 40px;
+    width: 80%;
+    z-index: 30;
+    transform: translate(-50%, -40%);
+    color: #eee;
+    text-align: center;
+
+}
+.slider:after {
     content: "";
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: black;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.3;
 }
-
-.landing-page h2 {
-    font-size: 50px;
-    color: white;
-    margin-bottom: 100px;
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
-.cta {
-    display: flex;
-    flex-direction: column;
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .cta {
+    position: absolute;
+    bottom: 70px;
+    left: -610px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
     z-index: 10;
 }
-#primary-btn  {
-    color: #0A1D29;
-    font-family: 'Dancing script', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-image: url(IMG/marble.jpg);
-    border-radius: 5px;
-    text-decoration: none;
+.slide .cta h2 {
+    margin-bottom: 40px;
     font-size: 30px;
+}
+.slide .cta a {
+    text-decoration: none;
+    border: 2px solid #0A1D29;
+    font-weight: bold;
+    color: rgb(19, 25, 32);
     padding: .5em 1em;
-    width: 40%;
-    margin: auto;
-    text-align: center;
+}
+
+.slide.current .cta {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+#primary-btn  {
+  cursor: pointer;
+  font-size: 20px;
 }
 #primary-btn:hover {
-    color: white;
+    color: #333;  
+}
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
 
-    
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+.buttons button {
+    border: 2px solid white;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+.buttons button:hover {
+    background-color: #fff;
+    color: #333;
+}
+.slide:first-child {
+    background: url(img/katy-studio) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.slide:nth-child(2) {
+    background: url(img/gallery/img18.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.slide:nth-child(3) {
+    background: url(img/studio2) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .scroll {
@@ -219,7 +283,7 @@ nav {
     justify-content: center;
     text-align: center;
     padding: 20px 0px;
-    background-color: #0A1D29;
+    background-color: #111;
     color: white;
 }
 .welcome-section .container {
@@ -368,6 +432,7 @@ nav {
     background-color: white;
     border-radius: 5px;
     padding-bottom: 10px;
+    pointer-events: none;
 }
 #index-gallery .img {
     width: 100%;
@@ -379,76 +444,76 @@ nav {
     text-align: center;
 }
 #index-gallery .img-1 {
-    background-image: url(IMG/thumb/img1.png);
+    background-image: url(IMG/gallery/img1.png);
 }
 #index-gallery .img-2 {
-    background-image: url(IMG/thumb/img2.png);
+    background-image: url(IMG/gallery/img2.png);
 }
 #index-gallery .img-3 {
-    background-image: url(IMG/thumb/img3.png);
+    background-image: url(IMG/gallery/img3.png);
 }
 #index-gallery .img-4 {
-    background-image: url(IMG/thumb/img4.png);
+    background-image: url(IMG/gallery/img4.png);
 }
 #index-gallery .img-5 {
-    background-image: url(IMG/thumb/img5.png);
+    background-image: url(IMG/gallery/img5.png);
 }
 #index-gallery .img-6 {
-    background-image: url(IMG/thumb/img6.png);
+    background-image: url(IMG/gallery/img6.png);
 }
 #index-gallery .img-7 {
-    background-image: url(IMG/thumb/img7.png);
+    background-image: url(IMG/gallery/img7.png);
 }
 #index-gallery .img-8 {
-    background-image: url(IMG/thumb/img8.png);
+    background-image: url(IMG/gallery/img8.png);
 }
 #index-gallery .img-9 {
-    background-image: url(IMG/thumb/img9.png);
+    background-image: url(IMG/gallery/img9.png);
 }
 #index-gallery .img-10 {
-    background-image: url(IMG/thumb/img10.png);
+    background-image: url(IMG/gallery/img10.png);
 }
 #index-gallery .img-11 {
-    background-image: url(IMG/thumb/img11.png);
+    background-image: url(IMG/gallery/img11.png);
 }
 #index-gallery .img-12 {
-    background-image: url(IMG/thumb/img12.png);
+    background-image: url(IMG/gallery/img12.png);
 }
 #index-gallery .img-13 {
-    background-image: url(IMG/thumb/img13.png);
+    background-image: url(IMG/gallery/img13.png);
 }
 #index-gallery .img-14 {
-    background-image: url(IMG/thumb/img14.png);
+    background-image: url(IMG/gallery/img14.png);
 }
 #index-gallery .img-15 {
-    background-image: url(IMG/thumb/img15.png);
+    background-image: url(IMG/gallery/img15.png);
 }
 #index-gallery .img-16 {
-    background-image: url(IMG/thumb/img16.png);
+    background-image: url(IMG/gallery/img16.png);
 }
 #index-gallery .img-17 {
-    background-image: url(IMG/thumb/img17.png);
+    background-image: url(IMG/gallery/img17.png);
 }
 #index-gallery .img-18 {
-    background-image: url(IMG/thumb/img18.png);
+    background-image: url(IMG/gallery/img18.png);
 }
 #index-gallery .img-19 {
-    background-image: url(IMG/thumb/img19.png);
+    background-image: url(IMG/gallery/img19.png);
 }
 #index-gallery .img-20 {
-    background-image: url(IMG/thumb/img20.png);
+    background-image: url(IMG/gallery/img20.png);
 }
 #index-gallery .img-21 {
-    background-image: url(IMG/thumb/img21.png);
+    background-image: url(IMG/gallery/img21.png);
 }
 #index-gallery .img-22 {
-    background-image: url(IMG/thumb/img22.png);
+    background-image: url(IMG/gallery/img22.png);
 }
 #index-gallery .img-23 {
-    background-image: url(IMG/thumb/img23.png);
+    background-image: url(IMG/gallery/img23.png);
 }
 #index-gallery .img-24 {
-    background-image: url(IMG/thumb/img24.png);
+    background-image: url(IMG/gallery/img24.png);
 }
 /* Pop-up window when clicked*/
 .img-window {
@@ -522,12 +587,25 @@ nav {
 }
 .banner {
     height: 50vh;
-    background-image: url(IMG/katy-studio);
+    background-image: url(IMG/jodie-studio);
     background-attachment: fixed;
+    background-position: center;
     background-size: cover;
+    position: relative;
+}
+.banner:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+
 }
 .contact {
-    background-color: #0A1D29;
+    background-color: #111;
     color: white;
     display: flex;
     flex-direction: column;
@@ -637,7 +715,20 @@ footer h2 {
     margin-bottom: 30px;
 }
 
+@media(max-width: 650px) {
+    .slide .cta {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
 
+    .slide.current .cta {
+        transform: translateY(-300px);
+    }
+    .cta {
+        text-align: center;
+    }
+}
 @media only screen and (min-width: 650px) {
     
     .landing-page h2 {
@@ -702,6 +793,7 @@ footer h2 {
         grid-template-columns: repeat(2, minmax(10px, 1fr));
         grid-template-rows: repeat(32, 10vw);
         grid-gap: 16px;
+        pointer-events: all;
     }
     .img {
         width: 100%;
@@ -845,6 +937,9 @@ footer h2 {
         text-transform: uppercase;
         padding: 0.6rem 1rem;
     }
+    .landing-page .title {
+        font-size: 60px;
+    }
     .welcome-section {
         min-height: 30vh;
         display: flex;
@@ -935,10 +1030,7 @@ footer h2 {
         grid-row: 3/4;
         grid-column: 1/2;
     }
-    #index-gallery {
-   width: 90%;
-   margin: auto;
-    }
+  
  
     .gallery h1 {
         font-size: 4.5em;
@@ -950,6 +1042,7 @@ footer h2 {
     }
     #index-gallery .container {
         width: 90%;
+        margin: auto;
         padding-bottom: 100px;
     }
     .img {
@@ -1029,9 +1122,6 @@ footer h2 {
     }
     .img-22, .img-23, .img-24 {
         grid-row: 17/19;
-    }
-    .banner {
-        margin-top: 200px;
     }
     .contact {
         padding-top: 0px;
