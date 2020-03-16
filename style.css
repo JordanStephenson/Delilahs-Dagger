@@ -132,14 +132,14 @@ nav {
 .slider {
     position: relative;
     overflow: hidden;
-    height: 90vh;
+    height: 80vh;
     width: 100vw;
 }
 .landing-page .title {
     position: absolute;
     top: 40%;
     left: 50%;
-    font-size: 30px;
+    font-size: 22px;
     width: 100%;
     z-index: 30;
     transform: translate(-50%, -40%);
@@ -202,7 +202,7 @@ nav {
 }
 #primary-btn  {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
 }
 #primary-btn:hover {
     color: #333;  
@@ -293,7 +293,7 @@ nav {
     padding: 20px 0px;
 }
 .headline {
-    font-size: 30px;
+    font-size: 20px;
 }
 .description {
     font-family: cursive;
@@ -730,14 +730,23 @@ footer h2 {
     }
 }
 @media only screen and (min-width: 650px) {
-    
+
+    .landing-page .title {
+        font-size: 30px;
+    }
+
     .landing-page h2 {
         font-size: 70px;
+    }
+    .slider {
+        height: 90vh;
     }
     .slide .cta h2 {
         font-size: 30px;
     }
-
+    #primary-btn  {
+        font-size: 20px;
+      }
     .heading h1{
         font-size: 60px;
     }
@@ -943,7 +952,7 @@ footer h2 {
         padding: 0.6rem 1rem;
     }
     .landing-page .title {
-        font-size: 60px;
+        font-size: 50px;
     }
     .welcome-section {
         min-height: 30vh;
@@ -1188,7 +1197,9 @@ footer h2 {
 
 }
 @media only screen and (min-width: 1600px) {
-    
+    .landing-page .title {
+        font-size: 70px;
+    }
     
     .description p, .headline h1{
         width: 80%;
