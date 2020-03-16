@@ -237,7 +237,7 @@ nav {
     background-position: center;
 }
 .slide:nth-child(2) {
-    background: url(IMG/gallery/img18.png) no-repeat;
+    background: url(IMG/img18.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
