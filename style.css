@@ -185,7 +185,7 @@ nav {
 }
 .slide .cta h2 {
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 20px;
 }
 .slide .cta a {
     text-decoration: none;
@@ -734,6 +734,10 @@ footer h2 {
     .landing-page h2 {
         font-size: 70px;
     }
+    .slide .cta h2 {
+        font-size: 30px;
+    }
+
     .heading h1{
         font-size: 60px;
     }
