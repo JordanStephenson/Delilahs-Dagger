@@ -32,6 +32,17 @@ const navSlide = () => {
 }
 navSlide();
 
+/* Parallax */
+
+const parallax = document.querySelectorAll('.slide');
+
+window.addEventListener('scroll', function() {
+    let offset = window.pageYOffset;
+    parallax.forEach((slide, index) => {
+        slide.style.backgroundPositionY = offset * 0.7 + 'px';
+    });
+});
+
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
@@ -55,6 +66,7 @@ const nextSlide = () => {
         slides[0].classList.add('current');
     }     
     setTimeout(() => current.classList.remove('current')); 
+    
 }
 
 const prevSlide = () => {
@@ -143,14 +155,6 @@ $('.dagger-img a').on('click', function(e) {
 })
 
 
-/* Parallax */
-
-const parallax = document.getElementById('parallax');
-
-window.addEventListener('scroll', function() {
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.7 + 'px';
-});
 
 /* View gallery image */
 
@@ -159,7 +163,7 @@ if(galleryImages) {
         image.addEventListener('click', () => {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue('background-image');
-            let getImgUrlPos = getFullImgUrl.split('IMG/gallery');
+            let getImgUrlPos = getFullImgUrl.split('IMG/');
             let setNewImgUrl = getImgUrlPos[1].replace('")', '');
 
             getLatestOpenedImg = index + 1;
@@ -171,7 +175,7 @@ if(galleryImages) {
             newImgWindow.setAttribute('onclick', 'closeImg()' );
             let newImg = document.createElement('img');
             newImgWindow.appendChild(newImg); 
-            newImg.setAttribute('src', 'IMG/gallery' + setNewImgUrl);
+            newImg.setAttribute('src', 'IMG/' + setNewImgUrl);
             newImg.setAttribute('id', 'current-img');
 
             newImg.onload = function() {
@@ -238,7 +242,7 @@ function changeImg(changeDir) {
             calcNewImg = galleryImages.length;
         }
     }
-    newImg.setAttribute('src', 'IMG/gallery/img' + calcNewImg + '.png');
+    newImg.setAttribute('src', 'IMG/img' + calcNewImg + '.png');
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;

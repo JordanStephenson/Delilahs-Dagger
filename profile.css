@@ -261,8 +261,7 @@ header {
     grid-column: 2/3;
 }
 .bio {
-    font-family: 'Cinzel', cursive;
-    width: 70%;
+    width: 80%;
     margin-top: 5%;
     padding-bottom: 30px;
     

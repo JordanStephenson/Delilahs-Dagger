@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: '`Cinzel', cursive;
+    font-family: 'Cinzel', serif;
     background-image: url(IMG/marble.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -147,6 +147,7 @@ nav {
     text-align: center;
 
 }
+
 .slider:after {
     content: "";
     width: 100%;
@@ -365,11 +366,11 @@ nav {
 }
 .jody {
   grid-row: 10/13;
-  background-image: url(IMG/gallery/img7.png);
+  background-image: url(IMG/img7.png);
 }
 .stephanie {
     grid-row: 13/16;
-    background-image: url(IMG/gallery/img16.png);
+    background-image: url(IMG/img16.png);
 }
 .sally {
     grid-row: 16/19;
@@ -443,76 +444,76 @@ nav {
     text-align: center;
 }
 #index-gallery .img-1 {
-    background-image: url(IMG/gallery/img1.png);
+    background-image: url(IMG/img1.png);
 }
 #index-gallery .img-2 {
-    background-image: url(IMG/gallery/img2.png);
+    background-image: url(IMG/img2.png);
 }
 #index-gallery .img-3 {
-    background-image: url(IMG/gallery/img3.png);
+    background-image: url(IMG/img3.png);
 }
 #index-gallery .img-4 {
-    background-image: url(IMG/gallery/img4.png);
+    background-image: url(IMG/img4.png);
 }
 #index-gallery .img-5 {
-    background-image: url(IMG/gallery/img5.png);
+    background-image: url(IMG/img5.png);
 }
 #index-gallery .img-6 {
-    background-image: url(IMG/gallery/img6.png);
+    background-image: url(IMG/img6.png);
 }
 #index-gallery .img-7 {
-    background-image: url(IMG/gallery/img7.png);
+    background-image: url(IMG/img7.png);
 }
 #index-gallery .img-8 {
-    background-image: url(IMG/gallery/img8.png);
+    background-image: url(IMG/img8.png);
 }
 #index-gallery .img-9 {
-    background-image: url(IMG/gallery/img9.png);
+    background-image: url(IMG/img9.png);
 }
 #index-gallery .img-10 {
-    background-image: url(IMG/gallery/img10.png);
+    background-image: url(IMG/img10.png);
 }
 #index-gallery .img-11 {
-    background-image: url(IMG/gallery/img11.png);
+    background-image: url(IMG/img11.png);
 }
 #index-gallery .img-12 {
-    background-image: url(IMG/gallery/img12.png);
+    background-image: url(IMG/img12.png);
 }
 #index-gallery .img-13 {
-    background-image: url(IMG/gallery/img13.png);
+    background-image: url(IMG/img13.png);
 }
 #index-gallery .img-14 {
-    background-image: url(IMG/gallery/img14.png);
+    background-image: url(IMG/img14.png);
 }
 #index-gallery .img-15 {
-    background-image: url(IMG/gallery/img15.png);
+    background-image: url(IMG/img15.png);
 }
 #index-gallery .img-16 {
-    background-image: url(IMG/gallery/img16.png);
+    background-image: url(IMG/img16.png);
 }
 #index-gallery .img-17 {
-    background-image: url(IMG/gallery/img17.png);
+    background-image: url(IMG/img17.png);
 }
 #index-gallery .img-18 {
-    background-image: url(IMG/gallery/img18.png);
+    background-image: url(IMG/img18.png);
 }
 #index-gallery .img-19 {
-    background-image: url(IMG/gallery/img19.png);
+    background-image: url(IMG/img19.png);
 }
 #index-gallery .img-20 {
-    background-image: url(IMG/gallery/img20.png);
+    background-image: url(IMG/img20.png);
 }
 #index-gallery .img-21 {
-    background-image: url(IMG/gallery/img21.png);
+    background-image: url(IMG/img21.png);
 }
 #index-gallery .img-22 {
-    background-image: url(IMG/gallery/img22.png);
+    background-image: url(IMG/img22.png);
 }
 #index-gallery .img-23 {
-    background-image: url(IMG/gallery/img23.png);
+    background-image: url(IMG/img23.png);
 }
 #index-gallery .img-24 {
-    background-image: url(IMG/gallery/img24.png);
+    background-image: url(IMG/img24.png);
 }
 /* Pop-up window when clicked*/
 .img-window {
@@ -536,11 +537,11 @@ nav {
 .img-btn-next, .img-btn-prev {
     display: block;
     padding: 6px 10px;
-    background-color: #0A1D29;
+    background-color: #111;
     position: fixed;
     top: 48vh;
     z-index: 500;
-    font-family: 'Cinzel', cursive;
+    font-family: 'Cinzel', serif;
     cursor: pointer;
     color: white;
 }
@@ -924,6 +925,7 @@ footer h2 {
       .social-links {
         width: 10%;
         opacity: 1;
+        margin-bottom: 0px;
     }
 
       
