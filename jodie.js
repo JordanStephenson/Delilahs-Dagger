@@ -34,6 +34,9 @@ navSlide()
 var tl = new TimelineMax();
 
 
+var tl = new TimelineMax();
+
+
 tl.from('.profile-banner', 1.5, {
     opacity: 0,
     y: 20,
@@ -43,12 +46,17 @@ tl.from('.profile-pic', 1.5, {
     opacity: 0,
     y: 20,
     ease: Power2.easeOut
-}, 0.5);
+}, 0.2);
 tl.from('.mini-gallery', 1.5, {
     opacity: 0,
     y: 20,
     ease: Power2.easeOut
-}, 0.5);
+}, 0.2);
+tl.from('.artist-buttons', 1.5, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0.4);
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
@@ -99,6 +107,15 @@ if(galleryImages) {
         });
     });
 }
+
+ /* Parallax */
+
+ const parallax = document.getElementById('parallax');
+
+ window.addEventListener('scroll', function() {
+     let offset = window.pageYOffset;
+     parallax.style.backgroundPositionY = offset * 0.5 + 'px';
+ });
 
 function closeImg() {
     document.querySelector('.img-window').remove();

@@ -45,12 +45,17 @@ tl.from('.profile-pic', 1.5, {
     opacity: 0,
     y: 20,
     ease: Power2.easeOut
-}, 0.5);
+}, 0.2);
 tl.from('.mini-gallery', 1.5, {
     opacity: 0,
     y: 20,
     ease: Power2.easeOut
-}, 0.5);
+}, 0.2);
+tl.from('.artist-buttons', 1.5, {
+    opacity: 0,
+    y: 20,
+    ease: Power2.easeOut
+}, 0.4);
 
 if(galleryImages) {
     galleryImages.forEach(function(image,index) {
@@ -77,6 +82,7 @@ if(galleryImages) {
                 let imgWidth = this.width;
                 let calcImgToEdge = ((windowWidth -imgWidth) / 2) - 80;
 
+                newImg.style.animation = `navLinkFade 0.7s ease forwards`;
                 let newPrevBtn = document.createElement('a');
                 let btnPrevText = document.createTextNode('Prev');
                 newPrevBtn.appendChild(btnPrevText);
@@ -87,16 +93,28 @@ if(galleryImages) {
     
                 let newNextBtn = document.createElement('a');
                 let btnNextText = document.createTextNode('Next');
+                newPrevBtn.style.animation = `navLinkFade 0.7s ease forwards`;
+
                 newNextBtn.appendChild(btnNextText);
                 container.appendChild(newNextBtn);
                 newNextBtn.setAttribute('class', 'img-btn-next');
                 newNextBtn.setAttribute('onclick', 'changeImg(1)');
                 newNextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
+                newNextBtn.style.animation = `navLinkFade 0.7s ease forwards`;
             };
  
         });
     });
 }
+
+ /* Parallax */
+
+ const parallax = document.getElementById('parallax');
+
+ window.addEventListener('scroll', function() {
+     let offset = window.pageYOffset;
+     parallax.style.backgroundPositionY = offset * 0.5 + 'px';
+ });
 
 function closeImg() {
     document.querySelector('.img-window').remove();
@@ -110,6 +128,7 @@ function changeImg(changeDir) {
     let getImgWindow = document.querySelector('.img-window');
     let newImg = document.createElement('img');
     getImgWindow.appendChild(newImg);
+    newImg.style.animation = `navLinkFade 0.7s ease forwards`;
 
     let calcNewImg;
     if(changeDir === 1) {
