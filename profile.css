@@ -12,17 +12,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: #111;
-    height: 50vh;
+    height: 55vh;
     width: 100%;
     background-image: url(IMG/background.webp);
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
-.profile-banner h1 {
-    margin-top: 150px;
-}
+
 .profile-banner h1, .profile-banner h3 {
     color: white;
     z-index: 10;
@@ -36,6 +34,12 @@ header {
     top: 0;
     left: 0;
     opacity: 0.1;
+}
+.profile-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
 }
 #banner {
     background-color: #0A1D29;
@@ -54,14 +58,12 @@ header {
     grid-template-rows: repeat(2, 120px);
     grid-gap: 16px;
     width: 80%;
-    margin: auto;
-    margin-bottom: 100px;
     z-index: 10;
 }
 .artist-btn {
     border: 2px solid #111;
-    height: 120px;
-    width: 90px;
+    height: 80px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +86,7 @@ header {
 .artist-buttons a{
     text-decoration: none;
     color: #111;
-    font-size: 15px;
+    font-size: 8px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
     height: 100%;
@@ -368,9 +370,23 @@ header {
 .bio {
     width: 80%;
     margin-top: 5%;
-    padding-bottom: 30px;
-    
+    padding-bottom: 30px;  
 }
+footer {
+    z-index: 100;
+}
+
+@media only screen and (min-width: 400px) {
+    .artist-btn {
+        height: 90px;
+        width: 70px;
+    }
+    .artist-btn a {
+        font-size: 12px;
+    }
+}
+
+
 @media only screen and (min-width: 650px) {
     .profile-banner h1 {
         font-size: 50px;
@@ -432,7 +448,6 @@ header {
     .artist-buttons {
         width: 80%;
     }
-
     .wrapper {
         width: 85%;
     }
@@ -440,7 +455,7 @@ header {
         padding-bottom: 30px;
         position: absolute;
         width: 85%;
-        top: 50%;
+        top: 55%;
     }
     .pictures {
         margin-top: 80px;
@@ -497,6 +512,13 @@ header {
     }
     .artist-buttons {
         width: 70%;
+    }
+    .artist-btn {
+        width: 90px;
+        height: 120px;
+    }
+    .artist-btn a{
+        font-size: 15px;
     }
  
     .profile-pic img{
