@@ -87,6 +87,11 @@ nav {
     margin-top: 0;
 }
 
+.logo {
+    height: 10vh;
+    display: none;
+}
+
 /* Nav animations*/
 
 .nav-active {
