@@ -126,6 +126,16 @@ tl.from('.button', 2, {
     y: 10,
     ease: Power2.easeOut
 }, 1);
+tl.from('.artists .container', 2, {
+    opacity: 0,
+    y: 10,
+    ease: Power2.easeOut
+}, 0.2);
+tl.from('.gallery', 2, {
+    opacity: 0,
+    y: 10,
+    ease: Power2.easeOut
+}, 0.2);
 
 
 

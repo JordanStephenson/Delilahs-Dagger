@@ -14,7 +14,7 @@ header {
     align-items: center;
     justify-content: space-around;
     color: #111;
-    height: 55vh;
+    height: 45vh;
     width: 100%;
     background-image: url(IMG/inside3.webp);
     background-position: top;
@@ -33,7 +33,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 .profile-title {
     display: flex;
@@ -60,7 +60,7 @@ header {
     grid-gap: 16px;
     width: 80%;
     z-index: 10;
-    margin-top: 80px;
+    margin: 50px 0px 40px 0px;
 }
 .artist-btn {
     border: 2px solid #111;
@@ -378,13 +378,41 @@ header {
     margin-top: 5%;
     padding-bottom: 30px;  
 }
-.sub-hero #primary-btn  {
+.cta-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+}
+.sub-hero #primary-btn, 
+.sub-hero #secondary-btn  {
     text-decoration: none;
     color: black;
-    font-size: 25px;
-    margin: 20px 0px 40px 0px;
+    font-size: 20px;
+    margin: auto;
     transition: all 0.3s ease-in-out;
     padding: 0.5em 1em;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .insta-btn {
+      width: 40%;
+  }
+  .sub-hero #secondary-btn {
+      background: none;
+      border: 2px solid #111;
+      color: #111;
+      padding: 0.5em 1.8em;
+      width: 30%;
+      display: none;
+  }
+
+  .fab {
+      color: #111;
+      transform: translateX(200%);
+      margin-bottom: 50px;
+    
   }
 
   .sub-hero #primary-btn:hover  {
@@ -407,6 +435,10 @@ footer {
 
 
 @media only screen and (min-width: 650px) {
+    .profile-banner {
+        height: 55vh;
+    }
+    
     .profile-banner h1 {
         font-size: 50px;
         
@@ -424,7 +456,7 @@ footer {
     }
 
     .wrapper {
-        min-height: 81vh;
+        min-height: 70vh;
         display: flex;
         justify-content: center;
         margin: auto;
@@ -474,6 +506,16 @@ footer {
 
     .artist-buttons {
         width: 80%;
+        margin: 60px 0px 0px 0px;
+    }
+    #leanne-wrapper {
+        min-height: 81vh;
+    }
+    #katy-wrapper {
+        min-height: 75vh;
+    }
+    #sally-wrapper {
+        min-height: 90vh;
     }
 
     .wrapper {
@@ -481,14 +523,13 @@ footer {
     }
 
     .sub-hero {
-        padding-bottom: 30px;
         position: absolute;
         width: 85%;
         top: 55%;
     }
 
     .pictures {
-        margin-top: 80px;
+        margin-top: 40px;
     }
 
     .profile-pic img{
@@ -541,8 +582,17 @@ footer {
 }
 @media only screen and (min-width: 1100px) {
 
+    #leanne-wrapper {
+        min-height: 86vh;
+    }
+    #katy-wrapper {
+        min-height: 93vh;
+    }
+    #sally-wrapper {
+        min-height: 94vh;
+    }
     .wrapper {
-        min-height: 90vh;
+        min-height: 82vh;
     }
     
     .profile-banner {
@@ -558,16 +608,16 @@ footer {
     }
 
     .artist-buttons {
-        width: 70%;
+        width: 80%;
     }
 
     .artist-btn {
-        width: 90px;
+        width: 80px;
         height: 120px;
     }
 
     .artist-btn a{
-        font-size: 15px;
+        font-size: 13px;
     }
  
     .profile-pic img{
@@ -591,14 +641,24 @@ footer {
     }
 
     .bio {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
 }
 @media only screen and (min-width: 1500px) {
 
+    #leanne-wrapper {
+        min-height: 94vh;
+    }
+    #sally-wrapper {
+        min-height: 100vh;
+    }
+
+    .wrapper {
+        min-height: 90vh;
+    }
     .artist-buttons {
-        width: 60%
+        width: 70%
     }
 
     .profile-pic {
