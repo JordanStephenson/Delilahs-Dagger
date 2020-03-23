@@ -4,6 +4,7 @@ body {
     background-image: url(IMG/marble.jpg);
     background-attachment: fixed;
 }
+
 header {
     height: 5vh;
 }
@@ -63,7 +64,7 @@ header {
     margin: 50px 0px 40px 0px;
 }
 .artist-btn {
-    border: 2px solid #111;
+    border: 1px solid #111;
     height: 80px;
     width: 50px;
     display: flex;
@@ -381,42 +382,42 @@ header {
 .cta-btn {
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    flex-direction: column;
+    width: 75%;
     align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
 }
+
+
 .sub-hero #primary-btn, 
 .sub-hero #secondary-btn  {
     text-decoration: none;
     color: black;
-    font-size: 20px;
-    margin: auto;
+    font-size: 15px;
     transition: all 0.3s ease-in-out;
-    padding: 0.5em 1em;
-    width: 30%;
+    padding: 0.5em 1.5em;
     text-align: center;
-    margin-bottom: 50px;
-  }
-  .insta-btn {
-      width: 40%;
+    margin-bottom: 40px;
   }
   .sub-hero #secondary-btn {
       background: none;
       border: 2px solid #111;
       color: #111;
-      padding: 0.5em 1.8em;
-      width: 30%;
-      display: none;
+      padding: 0.5em 1.5em;
   }
 
   .fab {
       color: #111;
-      transform: translateX(200%);
-      margin-bottom: 50px;
-    
+        margin-right: 5px;
+        margin-top: 5px;
   }
 
   .sub-hero #primary-btn:hover  {
     color: white;
+  }
+  .sub-hero #secondary-btn:hover  {
+    opacity: 0.5;
   }
 
 footer {
@@ -464,7 +465,6 @@ footer {
 
     .sub-hero {
         min-height: 65vh;
-        margin: auto;
         justify-content: center;
     }
 
@@ -493,9 +493,21 @@ footer {
     }
 
     .bio {
-        font-size: 1.3em;
+        font-size: 1em;
     }
   
+    .cta-btn {
+        flex-direction: row;
+        align-items: center;
+    }
+    .sub-hero #primary-btn {
+        margin-bottom: 0px;
+    }
+    .sub-hero #primary-btn, 
+.sub-hero #secondary-btn  {
+    font-size: 20px;
+  }
+
 }
 @media only screen and (min-width: 900px) {
     
@@ -512,7 +524,7 @@ footer {
         min-height: 81vh;
     }
     #katy-wrapper {
-        min-height: 75vh;
+        height: 78vh;
     }
     #sally-wrapper {
         min-height: 90vh;
@@ -576,6 +588,13 @@ footer {
     .bio {
         font-size: 1.2em;
     }
+    .cta-btn {
+        width: 50%;
+    }
+    .sub-hero #primary-btn, 
+.sub-hero #secondary-btn  {
+    margin-bottom: 0px;
+  }
     
 
   
@@ -586,7 +605,7 @@ footer {
         min-height: 86vh;
     }
     #katy-wrapper {
-        min-height: 93vh;
+        height: 85vh;
     }
     #sally-wrapper {
         min-height: 94vh;
@@ -652,6 +671,9 @@ footer {
     }
     #sally-wrapper {
         min-height: 100vh;
+    }
+    #katy-wrapper {
+        min-height: 92vh;
     }
 
     .wrapper {

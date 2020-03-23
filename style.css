@@ -83,6 +83,14 @@ nav {
     opacity: 0;
 
 }
+.nav-links .booking {
+    color: #EAA30B;
+}
+
+.nav-links .booking:hover,
+.nav-links a:hover {
+    opacity: 0.7;
+}
 .nav-links li:nth-child(1) {
     margin-top: 0;
 }
@@ -135,9 +143,7 @@ nav {
 .nav-links li:last-child {
     padding: .5em;
 }
-.nav-links a:hover {
-    color: #EAA30B;
-}
+
 .slider {
     position: relative;
     overflow: hidden;
@@ -146,15 +152,17 @@ nav {
 }
 .landing-page .title {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 50%;
-    font-size: 22px;
     width: 100%;
     z-index: 30;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -38%);
     color: #eee;
     text-align: center;
 
+}
+.landing-page .title h1 {
+    font-size: 36px;
 }
 
 .slider:after {
@@ -165,7 +173,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 .slide {
     position: absolute;
@@ -256,19 +264,6 @@ nav {
     background-position: top;
 }
 
-.scroll {
-    animation: move 1s infinite alternate 2s;
-    height: 25vh;
-    display: none;
-  }
-  @keyframes move {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(10px);
-    }
-  }
 .heading {
     text-align: center;
     color: #0A1D29;
@@ -603,7 +598,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.4;
 
 }
 .contact {
@@ -741,9 +736,13 @@ footer h3 {
 }
 @media only screen and (min-width: 650px) {
 
-    .landing-page .title {
-        font-size: 30px;
+    .landing-page .title h1{
+        font-size: 55px;
     }
+    .landing-page .title h3{
+        font-size: 32px;
+    }
+
 
     .landing-page h2 {
         font-size: 70px;
@@ -948,7 +947,7 @@ footer h3 {
         color: white;
         background-color: inherit;
         text-align: right;
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
       .social-links {
         width: 10%;
@@ -966,8 +965,11 @@ footer h3 {
         text-transform: uppercase;
         padding: 0.6rem 1rem;
     }
-    .landing-page .title {
-        font-size: 50px;
+    .landing-page .title h1{
+        font-size: 70px;
+    }
+    .landing-page .title h3{
+        font-size: 40px;
     }
     .welcome-section {
         min-height: 30vh;
@@ -1215,8 +1217,11 @@ footer h3 {
 
 }
 @media only screen and (min-width: 1600px) {
-    .landing-page .title {
-        font-size: 70px;
+    .landing-page .title h1{
+        font-size: 80px;
+    }
+    .landing-page .title h3{
+        font-size: 50px;
     }
     
     .description p, .headline h1{

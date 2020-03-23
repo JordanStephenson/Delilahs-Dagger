@@ -136,6 +136,11 @@ tl.from('.gallery', 2, {
     y: 10,
     ease: Power2.easeOut
 }, 0.2);
+tl.from('.contact', 2, {
+    opacity: 0,
+    y: 10,
+    ease: Power2.easeOut
+}, 0.2);
 
 
 
