@@ -242,25 +242,26 @@
                 *PLEASE NOTE EARLIER CLOSING TIMES ONCE ALL APPOINTMENTS HAVE BEEN SEEN TO</p>
         </div>
     </div>
-    <div class="form">
-    <form action="">
+    <div id="contact-form" class="form">
+    <form action="contactform.php" method="POST">
         <div class="input-group">
             <label for="">Name:</label>
-            <input type="text">
+            <input type="text" name="name">
         </div>
         <div class="input-group">
             <label for="">Phone:</label>
-            <input type="tel">
+            <input type="tel" name="phone">
         </div>
         <div class="input-group">
             <label>Email:</label>
-            <input type="email">
+            <input type="email" name="mail">
         </div>
         <div class="input-group">
             <label for="">Message:</label>
-            <input class="text-area" type="text-area">
+            <input class="text-area" type="text-area" name="message">
     </form>
 </div>
+<button class="form-btn">Submit</button>
 <div id="map">
 
 </div>

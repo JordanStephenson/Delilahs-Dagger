@@ -539,6 +539,13 @@ footer {
     section {
         padding-bottom: 100px;
     }
+    .artist-btn {
+        height: 100px;
+        width: 70px;
+    }
+    .artist-btn a {
+        font-size: 12px;
+    }
     .profile-pic h2 {
         font-size: 40px;
     }

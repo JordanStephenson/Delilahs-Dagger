@@ -131,22 +131,6 @@
 #enquiries-form .input-group input:focus {
     border-color: #EAA30B;
   }
-  #enquiries-form .form-btn {
-      margin-top: 10px;
-      outline: none;
-      padding: 0.5em 1em;
-      font-size: 18px;
-      border: none;
-      background: #EAA30B;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  #enquiries-form .form-btn:hover {
-    outline: none;
-    color: white;
-}
-
-
 
 @media only screen and (min-width: 600px) {
 

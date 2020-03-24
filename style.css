@@ -610,6 +610,7 @@ nav {
     justify-content: center;
     padding: 40px 0px 50px 0px;
     font-family: 'Cinzel', cursive;
+    text-align: center;
 }
 
 .contact h1 {
@@ -661,6 +662,7 @@ nav {
     align-items: center;
     min-width: 50vw;
     padding: 2rem 4rem;
+    text-align: left;
 }
 
 .input-group label{
@@ -714,6 +716,20 @@ footer h3 {
     font-size: 15px;
     opacity: 0.8;
     text-align: center;
+}
+.form-btn {
+    margin-top: 10px;
+    outline: none;
+    padding: 0.5em 1em;
+    font-size: 18px;
+    border: none;
+    background: #EAA30B;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-btn:hover {
+  outline: none;
+  color: white;
 }
 #map h1{
     color: #0A1D29;
