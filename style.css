@@ -315,8 +315,8 @@ nav {
     padding: 150px 0px 80px 0px;
     display: grid;
     grid-template-columns: 1% 1fr 1%;
-    grid-template-rows: repeat(21, 5vh);
-    grid-gap: 200px 0px;
+    grid-template-rows: repeat(21, 3vh);
+    grid-gap: 150px 0px;
     align-items: center;
     position: relative;
     width: 80%; 
@@ -713,6 +713,7 @@ footer h3 {
     font-family: sans-serif;
     font-size: 15px;
     opacity: 0.8;
+    text-align: center;
 }
 #map h1{
     color: #0A1D29;
