@@ -2,7 +2,6 @@ let galleryImages = document.querySelectorAll('.gallery-pics .img');
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
-
   
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -217,13 +216,62 @@ if(galleryImages) {
                 newNextBtn.setAttribute('onclick', 'changeImg(1)');
                 newNextBtn.style.cssText = 'right: '+ calcImgToEdge + 'px;';
                 newNextBtn.style.animation = `navLinkFade 0.7s ease forwards`;
+
+                //Whose Picture is it
+
+                    let artist = "";
+                    let artistSrc = "";
+                
+                    if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '4') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '6') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '4') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '8') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ) {
+                        artist = 'Leanne';
+                        artistSrc = 'leanne.html';
+                    } else if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '7') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '8') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '9') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '0') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '7') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '9') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ) {
+                        artist = 'Jodie';
+                        artistSrc = 'jodie.html';
+                    } else if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '6') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ) {
+                        artist = 'Stepahnie';
+                        artistSrc = 'stephanie.html';
+                    } else {
+                        artist = 'Sally';
+                        artistSrc = 'sally.html';
+                    }
+                
+                    let artistLink = document.createElement('a');
+                    let artistLinkText = document.createTextNode('More from ' + artist);
+                    artistLink.style.animation = `fadeUp 0.7s ease forwards`;
+                    artistLink.appendChild(artistLinkText);
+                    container.appendChild(artistLink);
+                    artistLink.setAttribute('class', 'artist-link');
+                    artistLink.setAttribute('href', artistSrc);
+                    artistLink.setAttribute('id', 'current-artist');
+
             };
  
         });
     });
 }
 
-/* Animate images */
+
 
 /* Close gallery image */
 
@@ -231,6 +279,7 @@ function closeImg() {
     document.querySelector('.img-window').remove();
     document.querySelector('.img-btn-next').remove();
     document.querySelector('.img-btn-prev').remove();
+    document.querySelector('.artist-link').remove();
     
 
 }
@@ -238,13 +287,12 @@ function closeImg() {
 
 function changeImg(changeDir) {
     document.querySelector('#current-img').remove();
+    document.querySelector('#current-artist').remove();
 
     let getImgWindow = document.querySelector('.img-window');
     let newImg = document.createElement('img');
-    getImgWindow.appendChild(newImg);
-    newImg.style.animation = `navLinkFade 0.7s ease forwards`;
-
     let calcNewImg;
+
     if(changeDir === 1) {
         calcNewImg = getLatestOpenedImg + 1;
         if(calcNewImg > galleryImages.length) {
@@ -257,9 +305,63 @@ function changeImg(changeDir) {
             calcNewImg = galleryImages.length;
         }
     }
+
+    newImg.style.animation = `navLinkFade 0.7s ease forwards`;
     newImg.setAttribute('src', 'IMG/img' + calcNewImg + '.png');
     newImg.setAttribute('id', 'current-img');
 
     getLatestOpenedImg = calcNewImg;
+
+    let newArtist = "";
+    let newArtistSrc = "";
+
+    if(calcNewImg === 1 ||
+        calcNewImg === 2 ||
+        calcNewImg === 3 ||
+        calcNewImg === 4 ||
+        calcNewImg === 5 ||
+        calcNewImg === 6 ||
+        calcNewImg === 12 ||
+        calcNewImg === 14 ||
+        calcNewImg === 18) {
+            newArtist = 'Leanne';
+            newArtistSrc = 'leanne.html';
+    } else if(calcNewImg === 7 ||
+        calcNewImg === 8 ||
+        calcNewImg === 9 ||
+        calcNewImg === 10||
+        calcNewImg === 17||
+        calcNewImg === 19) {
+            newArtist = 'Jodie';
+            newArtistSrc = 'jodie.html';
+    } else if(calcNewImg === 11 ||
+        calcNewImg === 13 ||
+        calcNewImg === 15 ||
+        calcNewImg === 16 ||
+        calcNewImg === 21 ||
+        calcNewImg === 23) {
+            newArtist = 'Stephanie';
+            newArtistSrc = 'stephanie.html';
+    } else {
+        newArtist = 'Sally';
+        newArtistSrc = 'sally.html';
+    };
+
+    let newArtistLink = document.createElement('a');
+    let newLinkText = document.createTextNode('More from ' + newArtist);
+    let container = document.body;
+
+    getImgWindow.appendChild(newImg);
+    newArtistLink.appendChild(newLinkText);
+    container.appendChild(newArtistLink);
+    newArtistLink.style.animation = `fadeUp 0.7s ease forwards`;
+
+    
+ 
+    newArtistLink.setAttribute('class', 'artist-link');
+    newArtistLink.setAttribute('href', newArtistSrc);
+    newArtistLink.setAttribute('id', 'current-artist');
+
+    
 
 }

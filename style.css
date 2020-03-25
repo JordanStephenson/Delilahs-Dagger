@@ -95,14 +95,11 @@ nav {
     margin-top: 0;
 }
 
-.logo {
-    display: none;
+.logo img{
+    height: 4vh;
 }
 
-.logo img {
-    height: 7vh;
-    
-}
+
 
 /* Nav animations*/
 
@@ -120,14 +117,14 @@ nav {
         transform: translateX(0px);
     }
 }
-@keyframes fadeOut{
+@keyframes fadeUp{
     from {
-        opacity: 1;
-        transform: translateX(0px);
+        opacity: 0;
+        transform: translateY(50px);
     }
     to {
-        opacity: 0;
-        transform: translateX(50px);
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 .toggle .line1 {
@@ -429,7 +426,6 @@ nav {
     background-color: white;
     border-radius: 5px;
     padding-bottom: 10px;
-    pointer-events: none;
 }
 #index-gallery .img {
     width: 100%;
@@ -532,7 +528,6 @@ nav {
 }
 /* Next image*/
 .img-btn-next, .img-btn-prev {
-    display: block;
     padding: 6px 10px;
     background-color: #111;
     position: fixed;
@@ -541,6 +536,22 @@ nav {
     font-family: 'Cinzel', serif;
     cursor: pointer;
     color: white;
+    display: none;
+}
+.artist-link {
+    position: fixed;
+    bottom: 10%;
+    left: 30%;
+    transform: translateX(-30%);
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    background: none;
+    border: 2px solid #eee;
+    z-index: 500;
+    text-decoration: none;
 }
 
 .img-btn-next:hover {
@@ -839,12 +850,21 @@ footer h3 {
         grid-gap: 16px;
         pointer-events: all;
     }
+
     .img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         grid-gap: 16px;
         padding: 0px;
+    }
+    .img-btn-next, .img-btn-prev {
+        display: block;
+    }
+    .artist-link {
+        bottom: 6%;
+        left: 42%;
+        transform: translateX(-42%);
     }
   
     .img-1 {
@@ -1099,6 +1119,13 @@ footer h3 {
         border-radius: 5px;
         
     }
+
+    .artist-link {
+        bottom: 5%;
+        left: 40%;
+        transform: translateX(-40%);
+    }
+
     .img-1 {
         grid-row: 1/4 ;
         grid-column: 1/2;
