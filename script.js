@@ -222,31 +222,31 @@ if(galleryImages) {
                     let artist = "";
                     let artistSrc = "";
                 
-                    if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '8') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '7') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '4') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '0') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '6') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '0') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '4') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '8') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ) {
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ) {
                         artist = 'Leanne';
                         artistSrc = 'leanne.html';
                     } else if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '7') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '2') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '8') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '9') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '0') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '6') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '7') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '9') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ) {
                         artist = 'Jodie';
                         artistSrc = 'jodie.html';
                     } else if ((setNewImgUrl[(setNewImgUrl.length) - 5] === '5') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '0') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
-                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '6') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '1') ||
+                    (setNewImgUrl[(setNewImgUrl.length) - 5] === '4') & (setNewImgUrl[(setNewImgUrl.length) - 6] === 'g') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '1') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ||
                     (setNewImgUrl[(setNewImgUrl.length) - 5] === '3') & (setNewImgUrl[(setNewImgUrl.length) - 6] === '2') ) {
                         artist = 'Stepahnie';
@@ -316,28 +316,28 @@ function changeImg(changeDir) {
     let newArtistSrc = "";
 
     if(calcNewImg === 1 ||
-        calcNewImg === 2 ||
+        calcNewImg === 7 ||
         calcNewImg === 3 ||
-        calcNewImg === 4 ||
-        calcNewImg === 5 ||
+        calcNewImg === 20 ||
+        calcNewImg === 8 ||
         calcNewImg === 6 ||
         calcNewImg === 12 ||
         calcNewImg === 14 ||
         calcNewImg === 18) {
             newArtist = 'Leanne';
             newArtistSrc = 'leanne.html';
-    } else if(calcNewImg === 7 ||
-        calcNewImg === 8 ||
-        calcNewImg === 9 ||
-        calcNewImg === 10||
+    } else if(calcNewImg === 2 ||
+        calcNewImg === 5 ||
+        calcNewImg === 13 ||
+        calcNewImg === 16||
         calcNewImg === 17||
         calcNewImg === 19) {
             newArtist = 'Jodie';
             newArtistSrc = 'jodie.html';
-    } else if(calcNewImg === 11 ||
-        calcNewImg === 13 ||
+    } else if(calcNewImg === 4 ||
+        calcNewImg === 10 ||
+        calcNewImg === 11 ||
         calcNewImg === 15 ||
-        calcNewImg === 16 ||
         calcNewImg === 21 ||
         calcNewImg === 23) {
             newArtist = 'Stephanie';

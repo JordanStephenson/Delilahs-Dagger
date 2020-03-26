@@ -21,6 +21,7 @@ header {
     background-image: url(IMG/inside3.webp);
     background-position: top;
     background-size: cover;
+    position: relative;
 }
 
 .profile-banner h1, .profile-banner h3 {
@@ -371,6 +372,34 @@ header {
     background-image: url(IMG/candice-img/candice-img9.png);
 }
 
+#zipporah-gallery .profile-img1 {
+    background-image: url(IMG/zipporah-img/img1);
+}
+#zipporah-gallery .profile-img2 {
+    background-image: url(IMG/zipporah-img/img2);
+}
+#zipporah-gallery .profile-img3 {
+    background-image: url(IMG/zipporah-img/img3);
+}
+#zipporah-gallery .profile-img4 {
+    background-image: url(IMG/zipporah-img/img4);
+}
+#zipporah-gallery .profile-img5 {
+    background-image: url(IMG/zipporah-img/img5);
+}
+#zipporah-gallery .profile-img6 {
+    background-image: url(IMG/zipporah-img/img6);
+}
+#zipporah-gallery .profile-img7 {
+    background-image: url(IMG/zipporah-img/img7);
+}
+#zipporah-gallery .profile-img8 {
+    background-image: url(IMG/zipporah-img/img8);
+}
+#zipporah-gallery .profile-img9 {
+    background-image: url(IMG/zipporah-img/img9);
+}
+
 
 
 .mini-gallery .profile-img1{
@@ -563,6 +592,7 @@ footer {
     #sally-wrapper {
         min-height: 90vh;
     }
+    
 
     .wrapper {
         width: 85%;

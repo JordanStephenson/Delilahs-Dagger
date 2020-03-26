@@ -66,7 +66,6 @@ nav {
     background: #111;
     height: 100vh;
     z-index: 7;
-    padding-top: 3em;
     text-align: center;
     transform: translateX(100%);
     transition: 0.5s ease-in;
@@ -76,7 +75,7 @@ nav {
     text-decoration: none;
     color: white;
     transition: all 0.2s ease-in-out;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 .nav-links li {
     margin-top: 20%;
@@ -94,7 +93,9 @@ nav {
 .nav-links li:nth-child(1) {
     margin-top: 0;
 }
-
+.logo {
+    display: none;
+}
 .logo img{
     height: 4vh;
 }
@@ -371,7 +372,7 @@ nav {
 }
 .zipporah {
     grid-row: 19/22;
-    background-image: url(IMG/zipporah\ profile.webp);
+    background-image: url(IMG/zipporah-img/img10);
 }
 .leanne-img, .candice-img, .jodie-img, .katy-img, .stephanie-img, .sally-img, .zipporah-img {
     display: flex;
@@ -959,8 +960,11 @@ footer h3 {
         opacity: 1;
     }
     .nav-links li a {
+        color: white;
+        background-color: inherit;
+        text-align: right;
         margin: 0px;
-    }
+      }
     .nav-links li:last-child {
         padding: 0;
         width: initial;
@@ -980,12 +984,7 @@ footer h3 {
         padding-top: 0px;
         transform: translateX(0%);
       }
-      .nav-links li a {
-        color: white;
-        background-color: inherit;
-        text-align: right;
-        font-size: 1.2em;
-      }
+
       .social-links {
         width: 10%;
         opacity: 1;
