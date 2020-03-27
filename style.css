@@ -93,11 +93,13 @@ nav {
 .nav-links li:nth-child(1) {
     margin-top: 0;
 }
+
 .logo {
-    display: none;
+    margin-right: 10px;
 }
+
 .logo img{
-    height: 4vh;
+    width: 3vw;
 }
 
 
@@ -395,7 +397,7 @@ nav {
     background-position: center;
     cursor: pointer;
     text-align: center;
-    border-radius: 5px;
+    
 }
 .leanne div, .candice div, .jody div, .katy div, .stephanie div, .sally div, .zipporah div {
     width: 100%;
@@ -847,7 +849,7 @@ footer h3 {
     }
     .gallery-pics {
         grid-template-columns: repeat(2, minmax(10px, 1fr));
-        grid-template-rows: repeat(32, 10vw);
+        grid-template-rows: repeat(32, 10vh);
         grid-gap: 16px;
         pointer-events: all;
     }
@@ -1065,6 +1067,11 @@ footer h3 {
     .profile-btn {
         background: none;
         color: #0A1D29;
+    }
+
+    .leanne, .candice, .jody, .katy, .stephanie, .sally, .zipporah {
+       border-radius: 5px;
+        
     }
   
    
