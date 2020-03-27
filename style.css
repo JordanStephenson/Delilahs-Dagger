@@ -69,6 +69,7 @@ nav {
     text-align: center;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+    padding-bottom: 10px;
   }
 
   .nav-links a {
@@ -94,12 +95,10 @@ nav {
     margin-top: 0;
 }
 
-.logo {
-    margin-right: 10px;
-}
+
 
 .logo img{
-    width: 3vw;
+    width: 8vw;
 }
 
 
@@ -966,6 +965,7 @@ footer h3 {
         background-color: inherit;
         text-align: right;
         margin: 0px;
+        font-size: 1em;
       }
     .nav-links li:last-child {
         padding: 0;
@@ -981,16 +981,21 @@ footer h3 {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        width: 95%;
+        width: 100%;
         height: 7vh;
         padding-top: 0px;
         transform: translateX(0%);
+        padding-bottom: 0px;
       }
 
       .social-links {
         width: 10%;
         opacity: 1;
         margin-bottom: 0px;
+    }
+    
+    .logo img {
+        width: 30px;
     }
 
       
