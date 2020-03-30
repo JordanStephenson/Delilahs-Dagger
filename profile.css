@@ -303,13 +303,13 @@ header {
     background-image: url(IMG/steph-thumb/img6.png);
 }
 #steph-gallery .profile-img7 {
-    background-image: url(IMG/stephanie-8.webp);
+    background-image: url(IMG/steph-thumb/img7.png);
 }
 #steph-gallery .profile-img8 {
-    background-image: url(IMG/stephanie-9.webp);
+    background-image: url(IMG/steph-thumb/img8.png);
 }
 #steph-gallery .profile-img9 {
-    background-image: url(IMG/steph-gallery-img.webp);
+    background-image: url(IMG/steph-thumb/img9.png);
 }
 
 /* Katy pics */
@@ -418,6 +418,11 @@ header {
     width: 80%;
     margin-top: 5%;
     padding-bottom: 30px;  
+}
+
+.bio a {
+    color: #EAA30B;
+    text-decoration: none;
 }
 .cta-btn {
     display: flex;
